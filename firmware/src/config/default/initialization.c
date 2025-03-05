@@ -282,7 +282,7 @@ void SYS_Initialize ( void* data )
 
     EVSYS_Initialize();
 
-    SERCOM0_SPI_Initialize();
+    SERCOM0_USART_Initialize();
 
     /*SERCOM5_USART_Initialize();*///USE to Right Logic IC/fuel guage IC /Charge IC I2C bus
 	SERCOM5_I2C_Initialize();
@@ -325,7 +325,7 @@ void SYS_Initialize ( void* data )
     APP_MCU_Initialize();
     APP_SNS_Initialize();
     APP_MIC_Initialize();
-    //APP_GUI_Initialize();
+    APP_GUI_Initialize();
     APP_ENC_Initialize();
     APP_PWR_Initialize();
     APP_COM_Initialize();

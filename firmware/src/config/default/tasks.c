@@ -94,7 +94,7 @@ static void lAPP_MIC_Tasks(  void *pvParameters  )
     }
 }
 /* Handle for the APP_GUI_Tasks. */
-/*
+
 TaskHandle_t xAPP_GUI_Tasks;
 
 static void lAPP_GUI_Tasks(  void *pvParameters  )
@@ -105,7 +105,7 @@ static void lAPP_GUI_Tasks(  void *pvParameters  )
         vTaskDelay(50U / portTICK_PERIOD_MS);
     }
 }
-*/
+
 /* Handle for the APP_ENC_Tasks. */
 TaskHandle_t xAPP_ENC_Tasks;
 
@@ -259,14 +259,14 @@ void SYS_Tasks ( void )
                 &xAPP_MIC_Tasks);
 
     /* Create OS Thread for APP_GUI_Tasks. */
-	/*
+	
     (void) xTaskCreate((TaskFunction_t) lAPP_GUI_Tasks,
                 "APP_GUI_Tasks",
                 512,
                 NULL,
                 1,
                 &xAPP_GUI_Tasks);
-*/
+
     /* Create OS Thread for APP_ENC_Tasks. */
     (void) xTaskCreate((TaskFunction_t) lAPP_ENC_Tasks,
                 "APP_ENC_Tasks",

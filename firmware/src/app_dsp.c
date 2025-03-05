@@ -783,7 +783,7 @@ void DSP_SPI_CALLBACK(uintptr_t context)
 void dsp_xfer(uint8_t *wrbuf, uint8_t *rdbuf, uint len)
 {
     SPI_SS_Clear();
-    SERCOM0_SPI_WriteRead (wrbuf, len, rdbuf, len);
+    //SERCOM0_SPI_WriteRead (wrbuf, len, rdbuf, len);
 }
 
 // .............................................................................
@@ -837,7 +837,7 @@ void dsp_read(uint32_t addr, uint8_t *rdbuf, uint len)
 uint8_t dsp_init()
 {
     uint8_t buf[1];
-    SERCOM0_SPI_CallbackRegister(DSP_SPI_CALLBACK, 0); 
+   // SERCOM0_SPI_CallbackRegister(DSP_SPI_CALLBACK, 0); 
     dsp_read(0x4000C000, buf, 1);
     osDelayMs(2);
     dsp_read(0x4000C000, buf, 1);

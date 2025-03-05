@@ -251,10 +251,12 @@ const H3DeviceVectors exception_table=
     .pfnEVSYS_OTHER_Handler        = EVSYS_OTHER_Handler,
     .pfnPAC_Handler                = PAC_Handler,
     .pfnRAMECC_Handler             = RAMECC_Handler,
-    .pfnSERCOM0_0_Handler          = SERCOM0_SPI_InterruptHandler,
-    .pfnSERCOM0_1_Handler          = SERCOM0_SPI_InterruptHandler,
-    .pfnSERCOM0_2_Handler          = SERCOM0_SPI_InterruptHandler,
-    .pfnSERCOM0_OTHER_Handler      = SERCOM0_SPI_InterruptHandler,
+    /*
+    .pfnSERCOM0_0_Handler          = SERCOM0_USART_InterruptHandler,
+    .pfnSERCOM0_1_Handler          = SERCOM0_USART_InterruptHandler,
+    .pfnSERCOM0_2_Handler          = SERCOM0_USART_InterruptHandler,
+    .pfnSERCOM0_OTHER_Handler      = SERCOM0_USART_InterruptHandler,
+     */
     .pfnSERCOM1_0_Handler          = SERCOM1_USART_InterruptHandler,
     .pfnSERCOM1_1_Handler          = SERCOM1_USART_InterruptHandler,
     .pfnSERCOM1_2_Handler          = SERCOM1_USART_InterruptHandler,
