@@ -1,0 +1,82 @@
+Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,Drive Strength
+1,PA00,VDD_MIC_EN,GPIO,Digital,Out,Low,,,NORMAL
+2,PA01,,Available,,,,,,NORMAL
+3,PC00,,Available,,,,,,NORMAL
+4,PC01,,Available,,,,,,NORMAL
+5,PC02,ENCODER_L_KEY,EIC_EXTINT2,Digital,High Impedance,n/a,Yes,No,NORMAL
+6,PC03,MFB_L,EIC_EXTINT3,Digital,High Impedance,n/a,Yes,No,NORMAL
+7,PA02,,Available,,,,,,NORMAL
+8,PA03,,Available,,,,,,NORMAL
+9,PB04,U5V_DET,ADC1_AIN6,Analog,High Impedance,n/a,,,NORMAL
+10,PB05,USB_SEL,GPIO,Digital,High Impedance,n/a,No,No,NORMAL
+13,PB06,,Available,,,,,,NORMAL
+14,PB07,,Available,,,,,,NORMAL
+15,PB08,U5V_DC_DC_EN,GPIO,Digital,Out,Low,,,NORMAL
+16,PB09,LED_L_G,TC4_WO1,Digital,High Impedance,n/a,No,No,NORMAL
+17,PA04,CC1_DET,ADC0_AIN4/X3/Y3/VREFB,Analog,High Impedance,n/a,,,NORMAL
+18,PA05,CC2_DET,ADC0_AIN5,Analog,High Impedance,n/a,,,NORMAL
+19,PA06,,Available,,,,,,NORMAL
+20,PA07,,Available,,,,,,NORMAL
+21,PC05,,Available,,,,,,NORMAL
+22,PC06,INT_MCU,EIC_EXTINT6,Digital,High Impedance,n/a,No,No,NORMAL
+23,PC07,,Available,,,,,,NORMAL
+26,PA08,SPI_SI_SDI0,QSPI_DATA0,Digital,High Impedance,n/a,No,No,NORMAL
+27,PA09,SPI_SO_SIO1,QSPI_DATA1,Digital,High Impedance,n/a,No,No,NORMAL
+28,PA10,SPI_WP,QSPI_DATA2,Digital,High Impedance,n/a,No,No,NORMAL
+29,PA11,SPI_SIO3,QSPI_DATA3,Digital,High Impedance,n/a,No,No,NORMAL
+32,PB10,SPI_SCLK,QSPI_SCK,Digital,High Impedance,n/a,No,No,NORMAL
+33,PB11,SPI_CS,QSPI_CS,Digital,High Impedance,n/a,No,No,NORMAL
+34,PB12,U3V3_VDD_EN,GPIO,Digital,Out,Low,,,NORMAL
+35,PB13,DSP_PWR_EN,GPIO,Digital,Out,Low,,,NORMAL
+36,PB14,INT_G,EIC_EXTINT14,Digital,High Impedance,n/a,No,No,NORMAL
+37,PB15,INT_IR,EIC_EXTINT15,Digital,High Impedance,n/a,No,No,NORMAL
+40,PC10,,Available,,,,,,NORMAL
+41,PC11,SPI_DC_L,GPIO,Digital,Out,Low,,,NORMAL
+42,PC12,SPI_SDA_L,GPIO,Digital,Out,Low,,,NORMAL
+43,PC13,SPI_SCL_L,GPIO,Digital,Out,Low,,,NORMAL
+44,PC14,SPI_CS_L,GPIO,Digital,Out,High,,,NORMAL
+45,PC15,,Available,,,,,,NORMAL
+46,PA12,I2C_SCL_G,SERCOM4_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+47,PA13,I2C_SDA_G,SERCOM4_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+48,PA14,,Available,,,,,,NORMAL
+49,PA15,,Available,,,,,,NORMAL
+52,PA16,I2C_SCL,SERCOM3_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+53,PA17,I2C_SDA,SERCOM3_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+54,PA18,RST_TOUCH_L,GPIO,Digital,Out,High,,,NORMAL
+55,PA19,RST_DIS_L1,GPIO,Digital,Out,High,,,NORMAL
+56,PC16,INT_CHG,EIC_EXTINT0,Digital,High Impedance,n/a,No,No,NORMAL
+57,PC17,INT_TOUCH_L,GPIO,Digital,In,n/a,No,No,NORMAL
+58,PC18,BUSY_L,GPIO,Digital,In,n/a,No,No,NORMAL
+59,PC19,LCD_LED_L,GPIO,Digital,Out,Low,,,NORMAL
+60,PC20,RS553_EN,GPIO,Digital,Out,High,,,NORMAL
+61,PC21,CC_PULL_UP,GPIO,Digital,Out,Low,,,NORMAL
+64,PB16,GPIO_PB16,GPIO,Digital,Out,High,,,NORMAL
+65,PB17,,Available,,,,,,NORMAL
+66,PB18,,Available,,,,,,NORMAL
+67,PB19,,Available,,,,,,NORMAL
+68,PB20,,Available,,,,,,NORMAL
+69,PB21,,Available,,,,,,NORMAL
+70,PA20,MCU_RESET_U6,GPIO,Digital,Out,High,,,NORMAL
+71,PA21,REGEN_77,GPIO,Digital,Out,Low,,,NORMAL
+72,PA22,UART1_TX_MCU_77,SERCOM5_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+73,PA23,UART1_RX_MCU_77,SERCOM5_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+74,PA24,ENCODER_L_A,PDEC_QDI0,Digital,High Impedance,n/a,No,Yes,NORMAL
+75,PA25,ENCODER_L_B,PDEC_QDI1,Digital,High Impedance,n/a,No,Yes,NORMAL
+78,PB22,RESET_77,GPIO,Digital,Out,High,,,NORMAL
+79,PB23,MIC_DET,EIC_EXTINT7,Digital,High Impedance,n/a,Yes,No,NORMAL
+80,PB24,SPI_MOSI,SERCOM0_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+81,PB25,SP_SCLK,SERCOM0_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+82,PC24,SPI_SS,GPIO,Digital,Out,High,,,NORMAL
+83,PC25,SPI_MISO,SERCOM0_PAD3,Digital,High Impedance,n/a,No,No,NORMAL
+84,PC26,,Available,,,,,,NORMAL
+85,PC27,UART_RX,SERCOM1_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+86,PC28,UART_TX,SERCOM1_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+87,PA27,ADAU1860_IRQ,EIC_EXTINT11,Digital,High Impedance,n/a,No,No,NORMAL
+93,PA30,,Available,,,,,,NORMAL
+94,PA31,,Available,,,,,,NORMAL
+95,PB30,ADAU1860_BOOT,GPIO,Digital,Out,Low,,,NORMAL
+96,PB31,LED_MIC,GPIO,Digital,Out,Low,,,NORMAL
+97,PB00,ADAU1860_PD,GPIO,Digital,Out,Low,,,NORMAL
+98,PB01,LED_L_R,TC7_WO1,Digital,High Impedance,n/a,No,No,NORMAL
+99,PB02,VDD_1V8_EN,GPIO,Digital,Out,Low,,,NORMAL
+100,PB03,ADC0_AIN15,ADC0_AIN15/X21/Y21,Analog,High Impedance,n/a,,,NORMAL

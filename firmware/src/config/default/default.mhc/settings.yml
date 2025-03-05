@@ -1,0 +1,13 @@
+configName: default
+folderName: leftmcu
+format_version: v1.0
+frameworkPath: E:\Tools\harmony3
+processor: ATSAMD51N20A
+projectName: leftmcu
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: SAMD51_DFP\3.7.237
