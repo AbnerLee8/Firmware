@@ -329,7 +329,7 @@ void SYS_Initialize ( void* data )
     APP_ENC_Initialize();
     APP_PWR_Initialize();
     APP_COM_Initialize();
-    APP_DSP_Initialize();
+//    APP_DSP_Initialize();
     APP_MEM_Initialize();
     BUT_MGR_Initialize();
 

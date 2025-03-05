@@ -79,7 +79,7 @@ extern TaskHandle_t xAPP_PWR_Tasks;
 extern TaskHandle_t xAPP_COM_Tasks;
 
 /* Declaration of  APP_DSP_Tasks task handle */
-extern TaskHandle_t xAPP_DSP_Tasks;
+//extern TaskHandle_t xAPP_DSP_Tasks;
 
 /* Declaration of  APP_MEM_Tasks task handle */
 extern TaskHandle_t xAPP_MEM_Tasks;

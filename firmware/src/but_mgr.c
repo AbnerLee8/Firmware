@@ -241,14 +241,14 @@ void BUT_MGR_Tasks ( void )
                 case LEFT_ENCODER:
                 case LEFT_ENCODER_STOP:
                     // Update ChatMix
-                    json_fn_i_chat_mix(qs_but.pos);
+//                    json_fn_i_chat_mix(qs_but.pos);
                     break;
                 //
                 // RIGHT SIDE
                 //
                 case RIGHT_MFB_1CLICK:
                     // Cycle to the next ANC Mode
-                    dsp_anc_mode_cycle();
+//                    dsp_anc_mode_cycle();
                     break;
                     
                 case RIGHT_MFB_2CLICK:

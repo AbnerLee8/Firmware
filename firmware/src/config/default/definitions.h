@@ -93,7 +93,7 @@
 #include "app_enc.h"
 #include "app_pwr.h"
 #include "app_com.h"
-#include "app_dsp.h"
+//#include "app_dsp.h"
 #include "app_mem.h"
 #include "but_mgr.h"
 #include "app_json.h"

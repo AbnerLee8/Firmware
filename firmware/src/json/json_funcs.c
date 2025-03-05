@@ -1009,7 +1009,7 @@ int json_fn_w_eq_preset_X(uint8_t p_indx, data_eq_pre_t *eq_data)
                 }            
             } else {
                 // Need to assign first available EQ Preset to this Profile
-                err = json_eq_presets_first_defined(&eq_new);
+//                err = json_eq_presets_first_defined(&eq_new);
                 if (err < 0) {
                     return -4;
                 }
@@ -3190,7 +3190,7 @@ int json_fn_w_eq_preset_en(uint8_t p_indx, char *val_str)
             } else {
                 // The specified EQ Preset is NOT defined
                 // FInd the first available:
-                err = json_eq_presets_first_defined(&eq_id);
+ //               err = json_eq_presets_first_defined(&eq_id);
                 if (err < 0) {
                     // No EQ Preset defined!
                     return -3;

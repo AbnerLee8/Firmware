@@ -140,6 +140,7 @@ static void lAPP_COM_Tasks(  void *pvParameters  )
     }
 }
 /* Handle for the APP_DSP_Tasks. */
+/*
 TaskHandle_t xAPP_DSP_Tasks;
 
 static void lAPP_DSP_Tasks(  void *pvParameters  )
@@ -150,6 +151,7 @@ static void lAPP_DSP_Tasks(  void *pvParameters  )
         vTaskDelay(50U / portTICK_PERIOD_MS);
     }
 }
+ */
 /* Handle for the APP_MEM_Tasks. */
 TaskHandle_t xAPP_MEM_Tasks;
 
@@ -292,13 +294,14 @@ void SYS_Tasks ( void )
                 &xAPP_COM_Tasks);
 
     /* Create OS Thread for APP_DSP_Tasks. */
+   /* 
     (void) xTaskCreate((TaskFunction_t) lAPP_DSP_Tasks,
                 "APP_DSP_Tasks",
                 512,
                 NULL,
                 1,
                 &xAPP_DSP_Tasks);
-
+  */
     /* Create OS Thread for APP_MEM_Tasks. */
     (void) xTaskCreate((TaskFunction_t) lAPP_MEM_Tasks,
                 "APP_MEM_Tasks",

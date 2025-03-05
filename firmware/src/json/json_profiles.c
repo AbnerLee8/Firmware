@@ -180,7 +180,7 @@ int json_profiles_new_profile_actions()
     // Note: EQ Preset indices can be the same or different
     eq_indx_old = data_pro_copy.eq_pre_in_use;
     eq_indx_req = data_pro[indx].eq_pre_in_use;
-    err = json_eq_presets_swap(eq_indx_old, eq_indx_req);
+//    err = json_eq_presets_swap(eq_indx_old, eq_indx_req);
     if (err < 0) {
         // Problem occurred when switching to new EQ Preset
         return -2;

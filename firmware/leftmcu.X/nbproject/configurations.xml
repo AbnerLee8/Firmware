@@ -298,7 +298,6 @@
       <itemPath>../src/app_com.h</itemPath>
       <itemPath>../src/app_mcu.h</itemPath>
       <itemPath>../src/app_enc.h</itemPath>
-      <itemPath>../src/app_dsp.h</itemPath>
       <itemPath>../src/app.h</itemPath>
       <itemPath>../src/fifo.h</itemPath>
       <itemPath>../src/but_mgr.h</itemPath>
@@ -316,7 +315,6 @@
       <itemPath>../src/utils.h</itemPath>
       <itemPath>../src/large_files.h</itemPath>
       <itemPath>../src/json/json_build.h</itemPath>
-      <itemPath>../src/json/json_eq_presets.h</itemPath>
       <itemPath>../src/json/json_profiles.h</itemPath>
       <itemPath>../src/app_gui.h</itemPath>
     </logicalFolder>
@@ -479,7 +477,6 @@
       <itemPath>../src/app_com.c</itemPath>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
       <itemPath>../src/app_mcu.c</itemPath>
-      <itemPath>../src/app_dsp.c</itemPath>
       <itemPath>../src/app.c</itemPath>
       <itemPath>../src/fifo.c</itemPath>
       <itemPath>../src/but_mgr.c</itemPath>
@@ -496,7 +493,6 @@
       <itemPath>../src/utils.c</itemPath>
       <itemPath>../src/large_files.c</itemPath>
       <itemPath>../src/json/json_build.c</itemPath>
-      <itemPath>../src/json/json_eq_presets.c</itemPath>
       <itemPath>../src/json/json_profiles.c</itemPath>
       <itemPath>../src/app_gui.c</itemPath>
     </logicalFolder>
