@@ -140,17 +140,17 @@ void APP_MCU_Tasks ( void )
     // Right MFB Button (e.g. number of clicks enabled
     // SO the code below retrieves these three messages and passes the 
     // information to the RIght MCU, using the printf() functioon.
-    for (int i = 0; i < 3; i++) {
-        if (osQueueReceive(Q_mcu_init, &but_config, 50) == pdPASS) {
-            printf("[bconfig %d %d %d %d %d %d]\n",
-                        but_config.click_no_enable,
-                        but_config.long_press_enable,
-                        but_config.min_press_time,
-                        but_config.min_release_time,
-                        but_config.inter_click_time,
-                        but_config.long_press_time);
-        }
-    }
+//    for (int i = 0; i < 3; i++) {
+//        if (osQueueReceive(Q_mcu_init, &but_config, 50) == pdPASS) {
+//            printf("[bconfig %d %d %d %d %d %d]\n",
+//                        but_config.click_no_enable,
+//                        but_config.long_press_enable,
+//                        but_config.min_press_time,
+//                        but_config.min_release_time,
+//                        but_config.inter_click_time,
+//                        but_config.long_press_time);
+//        }
+//    }
     
     while(1) {
         OS_SLEEP(1); //osDelayMs(1);        

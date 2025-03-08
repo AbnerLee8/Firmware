@@ -288,8 +288,8 @@ void bootloader_SERIAL_MEMORY_Tasks( void )
 //                bootloader_TriggerReset();
                 // !test! - start
                 // Move to verification after writing is done
-//                currentReadAddress = 0; // Start reading from the beginning of memory
-                currentReadAddress = 0xC000; // Start reading from the beginning of memory
+                currentReadAddress = 0; // Start reading from the beginning of memory
+                //currentReadAddress = 0xC000; // Start reading from the beginning of memory
                 btlData.currentState = BOOTLOADER_VERIFY_PAGE;                
                 // !test! - end
             }
@@ -327,8 +327,8 @@ void bootloader_SERIAL_MEMORY_Tasks( void )
             {
                 currentReadAddress += PAGE_SIZE;
 
-                //if (currentReadAddress >= btlData.fileStat.fsize)
-                if (currentReadAddress >= (btlData.fileStat.fsize + 0xC000))
+                if (currentReadAddress >= btlData.fileStat.fsize)
+                //if (currentReadAddress >= (btlData.fileStat.fsize + 0xC000))
                 {
                     btlData.currentState = BOOTLOADER_FINISH_VERIFICATION;
                 }

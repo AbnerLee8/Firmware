@@ -15,6 +15,7 @@ volatile bool boom_mic_connected;
 // .............................................................................
 void mic_boom_enable()
 {
+    printf("mic boom en\n");
     VDD_MIC_EN_Set();
     //dsp_boom_mic_enable();
     
@@ -25,6 +26,7 @@ void mic_boom_enable()
 // .............................................................................
 void mic_boom_disable()
 {
+     printf("mic boom dis\n");
     VDD_MIC_EN_Clear();
     //dsp_boom_mic_disable();
 }
@@ -34,6 +36,7 @@ void mic_boom_disable()
 // .............................................................................
 void mic_talk_enable()
 {
+     printf("talk mic en\n");
     //dsp_talk_mics_enable();
 }
 
@@ -42,6 +45,7 @@ void mic_talk_enable()
 // .............................................................................
 void mic_talk_disable()
 {
+    printf("talk mic dis\n");
     //dsp_talk_mics_disable();
 }
 
@@ -75,8 +79,8 @@ void mic_mute_toggle(uint8_t toggle_event)
         if (mic_muted) {
             // 1. Boom mic is connected and Mic just muted
             // Mic just muted - disable all mics
-            //mic_boom_disable();
-            //mic_talk_disable();
+            mic_boom_disable();
+            mic_talk_disable();
            // dsp_mute_all_mics();                
             
             // MIC Led ON
@@ -84,8 +88,8 @@ void mic_mute_toggle(uint8_t toggle_event)
         } else {
             // 2. Boom mic is connected and Mic just unmuted
             // Mic just unmuted - enable the boom mic, and disable the talk mics
-            //mic_boom_enable();
-            //mic_talk_disable();
+            mic_boom_enable();
+            mic_talk_disable();
             //dsp_using_boom_mic();
             
             // MIC Led OFF
@@ -98,15 +102,15 @@ void mic_mute_toggle(uint8_t toggle_event)
         if (mic_muted) {
             // 3. Boom mic is disconnected and Mic just muted
             // Mic just muted - disable all mics
-            //mic_boom_disable();
-            //mic_talk_disable();
+            mic_boom_disable();
+            mic_talk_disable();
             //dsp_mute_all_mics();                
             
         } else {
             // 4. Boom mic is disconnected and Mic just unmuted
             // Mic just unmuted - disable boom mic, enable the talk mics
-            //mic_boom_disable();
-            //mic_talk_enable();
+            mic_boom_disable();
+            mic_talk_enable();
             //dsp_using_dmics();
         }
     }

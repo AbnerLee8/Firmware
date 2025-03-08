@@ -236,6 +236,28 @@ static const SYS_TIME_INIT sysTimeInitData =
 // *****************************************************************************
 // *****************************************************************************
 
+/*******************************************************************************
+  Function:
+    void STDIO_BufferModeSet ( void )
+
+  Summary:
+    Sets the buffering mode for stdin and stdout
+
+  Remarks:
+ ********************************************************************************/
+static void STDIO_BufferModeSet(void)
+{
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 21.6 deviated 2 times in this file.  Deviation record ID -  H3_MISRAC_2012_R_21_6_DR_3 */
+
+    /* Make stdin unbuffered */
+    setbuf(stdin, NULL);
+
+    /* Make stdout unbuffered */
+    setbuf(stdout, NULL);
+}
+
+
 /* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
@@ -256,6 +278,9 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize( );
 
+    STDIO_BufferModeSet();
+
+
   
     PORT_Initialize();
 
@@ -270,9 +295,9 @@ void SYS_Initialize ( void* data )
 
     TC2_TimerInitialize();
 
-    PDEC_QDECInitialize();
-
     TC4_CompareInitialize();
+
+    PDEC_QDECInitialize();
 
     TC7_CompareInitialize();
 
@@ -280,19 +305,16 @@ void SYS_Initialize ( void* data )
 
     SERCOM1_USART_Initialize();
 
-    EVSYS_Initialize();
-
     SERCOM0_USART_Initialize();
 
-    /*SERCOM5_USART_Initialize();*///USE to Right Logic IC/fuel guage IC /Charge IC I2C bus
-	SERCOM5_I2C_Initialize();
+    EVSYS_Initialize();
 
     PM_Initialize();
 
+	SERCOM5_I2C_Initialize();
+
     SERCOM4_I2C_Initialize();
 	
-	SERCOM6_USART_Initialize();
-
     EIC_Initialize();
 
     QSPI_Initialize();
@@ -329,7 +351,7 @@ void SYS_Initialize ( void* data )
     APP_ENC_Initialize();
     APP_PWR_Initialize();
     APP_COM_Initialize();
-//    APP_DSP_Initialize();
+    APP_DSP_Initialize();
     APP_MEM_Initialize();
     BUT_MGR_Initialize();
 

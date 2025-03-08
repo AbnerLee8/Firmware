@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/work/Firmware/firmware/src/config/default/tasks.c</file>
+            <file>file:/D:/work/Firmware/firmware/src/app_json.c</file>
+            <file>file:/D:/work/Firmware/firmware/src/app_mcu.c</file>
+            <file>file:/D:/work/Firmware/firmware/src/app_mcu.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/app.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/app_mic.c</file>
+            <file>file:/D:/work/Firmware/firmware/src/json/json_funcs.c</file>
+        </group>
     </open-files>
 </project-private>

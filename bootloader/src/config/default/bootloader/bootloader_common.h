@@ -65,8 +65,8 @@
 
 #define FLASH_END_ADDRESS                       (FLASH_START + FLASH_LENGTH)
 
-#define APP_START_ADDRESS                       (0xc000U)
-
+//#define APP_START_ADDRESS                       (0xc000U)
+#define APP_START_ADDRESS                       (0x0U)
 #define BTL_TRIGGER_RAM_START                   0x20000000
 
 #define BTL_TRIGGER_LEN                         16

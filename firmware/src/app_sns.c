@@ -531,8 +531,8 @@ void APP_SNS_Tasks ( void )
         if (schedule_index >= 100) {                   // 1 second
             schedule_index = 0;
             // Send latest Accelerometer and Wear Sensor data to Power task
-            qs_sns.wear_status = wear_state_dbnc;
-            osQueueSendToBack(Q_pwr_sns, &qs_sns, 10);
+//            qs_sns.wear_status = wear_state_dbnc;
+//            osQueueSendToBack(Q_pwr_sns, &qs_sns, 10);
         }
         
         

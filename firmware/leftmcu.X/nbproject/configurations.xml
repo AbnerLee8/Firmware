@@ -69,7 +69,6 @@
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom1_usart.h</itemPath>
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
-                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom6_usart.h</itemPath>
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom0_usart.h</itemPath>
               </logicalFolder>
             </logicalFolder>
@@ -317,6 +316,7 @@
       <itemPath>../src/json/json_build.h</itemPath>
       <itemPath>../src/json/json_profiles.h</itemPath>
       <itemPath>../src/app_gui.h</itemPath>
+      <itemPath>../src/app_dsp.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -394,7 +394,6 @@
               </logicalFolder>
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom1_usart.c</itemPath>
-                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom6_usart.c</itemPath>
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom0_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
@@ -495,6 +494,7 @@
       <itemPath>../src/json/json_build.c</itemPath>
       <itemPath>../src/json/json_profiles.c</itemPath>
       <itemPath>../src/app_gui.c</itemPath>
+      <itemPath>../src/app_dsp.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
