@@ -309,9 +309,11 @@ void SYS_Initialize ( void* data )
 
     EVSYS_Initialize();
 
-    PM_Initialize();
+    SERCOM6_SPI_Initialize();
 
-	SERCOM5_I2C_Initialize();
+    SERCOM5_I2C_Initialize();
+
+    PM_Initialize();
 
     SERCOM4_I2C_Initialize();
 	
@@ -344,14 +346,12 @@ void SYS_Initialize ( void* data )
 
 
     /* MISRAC 2012 deviation block end */
-    APP_MCU_Initialize();
+    APP_ATMO_Initialize();
     APP_SNS_Initialize();
     APP_MIC_Initialize();
-    APP_GUI_Initialize();
     APP_ENC_Initialize();
     APP_PWR_Initialize();
     APP_COM_Initialize();
-    APP_DSP_Initialize();
     APP_MEM_Initialize();
     BUT_MGR_Initialize();
 

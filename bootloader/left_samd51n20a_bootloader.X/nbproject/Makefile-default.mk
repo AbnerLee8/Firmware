@@ -63,9 +63,6 @@ OBJECTFILES=${OBJECTDIR}/_ext/1748409734/bootloader_serial_memory.o ${OBJECTDIR}
 # Source Files
 SOURCEFILES=../src/config/default/bootloader/bootloader_serial_memory.c ../src/config/default/bootloader/bootloader_common.c ../src/config/default/driver/memory/src/drv_memory.c ../src/config/default/driver/memory/src/drv_memory_file_system.c ../src/config/default/driver/mx25l/src/drv_mx25l.c ../src/config/default/peripheral/clock/plib_clock.c ../src/config/default/peripheral/cmcc/plib_cmcc.c ../src/config/default/peripheral/evsys/plib_evsys.c ../src/config/default/peripheral/nvic/plib_nvic.c ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c ../src/config/default/peripheral/port/plib_port.c ../src/config/default/peripheral/qspi/plib_qspi.c ../src/config/default/peripheral/sercom/usart/plib_sercom0_usart.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/system/cache/sys_cache.c ../src/config/default/system/fs/fat_fs/file_system/ffunicode.c ../src/config/default/system/fs/fat_fs/file_system/ff.c ../src/config/default/system/fs/fat_fs/hardware_access/diskio.c ../src/config/default/system/fs/src/sys_fs.c ../src/config/default/system/fs/src/sys_fs_media_manager.c ../src/config/default/system/fs/src/sys_fs_fat_interface.c ../src/config/default/system/int/src/sys_int.c ../src/config/default/tasks.c ../src/config/default/initialization.c ../src/config/default/libc_syscalls.c ../src/config/default/interrupts.c ../src/config/default/exceptions.c ../src/config/default/startup_xc32.c ../src/main.c ../src/bootloader_app.c ../src/app.c
 
-# Pack Options 
-PACK_COMMON_OPTIONS=-I "${CMSIS_DIR}/CMSIS/Core/Include"
-
 
 
 CFLAGS=
@@ -493,19 +490,28 @@ ${DISTDIR}/left_samd51n20a_bootloader.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECT
 	${MP_CC} $(MP_EXTRA_LD_PRE) -g   -mprocessor=$(MP_PROCESSOR_OPTION)  -mno-device-startup-code -o ${DISTDIR}/left_samd51n20a_bootloader.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D=__DEBUG_D,--defsym=_min_heap_size=512,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--report-mem,-DRAM_LENGTH=0x3fff0,-DRAM_ORIGIN=0x20000010,-DROM_LENGTH=0x6000,--memorysummary,${DISTDIR}/memoryfile.xml -mdfp="${DFP_DIR}/samd51a"
 	
 else
-${DISTDIR}/left_samd51n20a_bootloader.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   ../src/config/default/ATSAMD51N20A.ld
+${DISTDIR}/left_samd51n20a_bootloader.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   ../src/config/default/ATSAMD51N20A.ld ../../firmware/leftmcu.X/dist/default/production/leftmcu.X.production.hex
 	@${MKDIR} ${DISTDIR} 
 	${MP_CC} $(MP_EXTRA_LD_PRE)  -mprocessor=$(MP_PROCESSOR_OPTION)  -mno-device-startup-code -o ${DISTDIR}/left_samd51n20a_bootloader.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}          -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=_min_heap_size=512,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--report-mem,-DRAM_LENGTH=0x3fff0,-DRAM_ORIGIN=0x20000010,-DROM_LENGTH=0x6000,--memorysummary,${DISTDIR}/memoryfile.xml -mdfp="${DFP_DIR}/samd51a"
 	${MP_CC_DIR}\\xc32-bin2hex ${DISTDIR}/left_samd51n20a_bootloader.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} 
+	@echo "Creating unified hex file"
+	@"D:/Program Files/Microchip/MPLABX/v6.20/mplab_platform/platform/../mplab_ide/modules/../../bin/hexmate" --edf="D:/Program Files/Microchip/MPLABX/v6.20/mplab_platform/platform/../mplab_ide/modules/../../dat/en_msgs.txt" ${DISTDIR}/left_samd51n20a_bootloader.X.${IMAGE_TYPE}.hex ../../firmware/leftmcu.X/dist/default/production/leftmcu.X.production.hex -odist/${CND_CONF}/production/left_samd51n20a_bootloader.X.production.unified.hex
+
 endif
 
 
 # Subprojects
 .build-subprojects:
+ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+	cd ../../firmware/leftmcu.X && ${MAKE}  -f Makefile CONF=default TYPE_IMAGE=DEBUG_RUN
+else
+	cd ../../firmware/leftmcu.X && ${MAKE}  -f Makefile CONF=default
+endif
 
 
 # Subprojects
 .clean-subprojects:
+	cd ../../firmware/leftmcu.X && rm -rf "build/default" "dist/default"
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}

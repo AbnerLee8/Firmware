@@ -352,6 +352,7 @@ void led_mic_pwm(uint8_t pwm)
     }
 }
 
+
 // ******************************************************************************
 // LEDs (display brightness)
 // ******************************************************************************
@@ -869,7 +870,7 @@ void enc_init()
     led_red_init();
     led_green_init();
     led_mic_init();
-//    led_disp_init();
+//    led_atmo_init();
     led_mngr_init();
 
     // Configure: Left Encoder
@@ -938,14 +939,17 @@ void enc_init()
     EIC_InterruptEnable(EIC_PIN_2);
     EIC_InterruptEnable(EIC_PIN_3);
     // Start the timer
-    TC1_TimerStart();   
+    TC1_TimerStart();  
+
 }
+
 // .............................................................................
 // Task initializations.
 // This function runs BEFORE task is created and scheduler started.
 // .............................................................................
 void APP_ENC_Initialize ( void )
 {
+
 }
 
 // .............................................................................

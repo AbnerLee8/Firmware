@@ -142,7 +142,10 @@ typedef struct {
 #define LED_RED     0       // Left
 #define LED_GREEN   1       // Left
 #define LED_MIC     2       // Left
-#define LED_BLUE    3       // Right
+#define LED_BLUE    3      // Right
+#define ATMO_LED    4       // Left ATMOSPHERE_LED
+
+
 
 #define TICKS_MS(x) (x/10)
 
@@ -284,7 +287,7 @@ extern QueueHandle_t Q_mic;
 extern void led_red_pwm(uint8_t pwm);
 extern void led_green_pwm(uint8_t pwm);
 extern void led_mic_pwm(uint8_t pwm);
-extern void led_disp_pwm(uint8_t pwm);
+extern void led_atmo_pwm(uint8_t pwm);
 
 // .............................................................................
 // Button Manager

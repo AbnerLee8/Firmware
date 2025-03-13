@@ -249,13 +249,24 @@
 //#define INT_CHG_PIN                  PORT_PIN_PC16
 
 /*** Macros for ATMOSPHERE_LED pin ***/
-#define ATMOSPHERE_LED_L1_Set()            (PORT_REGS->GROUP[2].PORT_OUTSET = ((uint32_t)1U << 16U))
-#define ATMOSPHERE_LED_Clear()             (PORT_REGS->GROUP[2].PORT_OUTCLR = ((uint32_t)1U << 16U))
-#define ATMOSPHERE_LED_Toggle()            (PORT_REGS->GROUP[2].PORT_OUTTGL = ((uint32_t)1U << 16U))
-#define ATMOSPHERE_LED_OutputEnable()      (PORT_REGS->GROUP[2].PORT_DIRSET = ((uint32_t)1U << 16U))
-#define ATMOSPHERE_LED_InputEnable()       (PORT_REGS->GROUP[2].PORT_DIRCLR = ((uint32_t)1U << 19U))
-#define ATMOSPHERE_LED_Get()               (((PORT_REGS->GROUP[2].PORT_IN >> 16U)) & 0x01U)
-#define ATMOSPHERE_LED_PIN                  PORT_PIN_PC16
+//#define ATMOSPHERE_LED_L1_Set()            (PORT_REGS->GROUP[2].PORT_OUTSET = ((uint32_t)1U << 16U))
+//#define ATMOSPHERE_LED_Clear()             (PORT_REGS->GROUP[2].PORT_OUTCLR = ((uint32_t)1U << 16U))
+//#define ATMOSPHERE_LED_Toggle()            (PORT_REGS->GROUP[2].PORT_OUTTGL = ((uint32_t)1U << 16U))
+//#define ATMOSPHERE_LED_OutputEnable()      (PORT_REGS->GROUP[2].PORT_DIRSET = ((uint32_t)1U << 16U))
+//#define ATMOSPHERE_LED_InputEnable()       (PORT_REGS->GROUP[2].PORT_DIRCLR = ((uint32_t)1U << 19U))
+//#define ATMOSPHERE_LED_Get()               (((PORT_REGS->GROUP[2].PORT_IN >> 16U)) & 0x01U)
+//#define ATMOSPHERE_LED_PIN                  PORT_PIN_PC16
+//*** Macros for SPI_MOSI pin ***/
+#define ATMOSPHERE_LED_SPI_MOSI_Get()               (((PORT_REGS->GROUP[2].PORT_IN >> 16U)) & 0x01U)
+#define ATMOSPHERE_LED_SPI_MOSI_PIN                  PORT_PIN_PC16
+
+#define ATMOSPHERE_LED_SPI_SCLK_Get()               (((PORT_REGS->GROUP[2].PORT_IN >> 17U)) & 0x01U)
+#define ATMOSPHERE_LED_SPI_SCLK_PIN                  PORT_PIN_PC17
+
+
+///*** Macros for SPI_MISO pin ***/
+#define ATMOSPHERE_LED_SPI_MISO_Get()               (((PORT_REGS->GROUP[2].PORT_IN >> 19U)) & 0x01U)
+#define ATMOSPHERE_LED_SPI_MISO_PIN                  PORT_PIN_PC19
 
 
 /*** Macros for INT_TOUCH_L pin ***/

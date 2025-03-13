@@ -56,7 +56,7 @@
 //#define APP_IMAGE_FILE_NAME     "seq_01.bin"
 //#define APP_IMAGE_FILE_NAME     "seq_02.bin"
 //#define APP_IMAGE_FILE_NAME     "bitb_01.bin"
-#define APP_IMAGE_FILE_NAME     "dfu_01.bin"
+#define APP_IMAGE_FILE_NAME     "dfu_file.bin"
 #define APP_IMAGE_FILE_PATH     BOOTLOADER_MOUNT_NAME"/"APP_IMAGE_FILE_NAME
 
 /* Bootloader state machine for the device mount, Read file from the external Flash

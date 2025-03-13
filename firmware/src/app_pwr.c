@@ -342,6 +342,7 @@ void APP_PWR_Tasks ( void )
    // Q_sensors_t qs_sns;
     Q_led_t qs_led_r;
     Q_led_t qs_led_g;
+	Q_led_t qs_led_a;
     uint16_t bat_v;
     uint8_t bat_s;
    // bool b_accel;
@@ -494,6 +495,15 @@ void APP_PWR_Tasks ( void )
                 // Update state
                 led_set_state(qs_led_r, LED_RED, LED_MODE_OFF, 0, 0, 0);                    // Red:     Off
                 led_set_state(qs_led_g, LED_GREEN, LED_MODE_ON, 0, 0, 0);                   // Green:   On
+                //  qs_led:  structure to hold all the parameters and to pass on to the queue
+                //  id:      LED ID
+                //  mode:    On / OFF / Flash
+                //  rate:    (if flashing) Slow / Fast
+                //  cnt:     (if flashing) number of flashes
+                //  dur:     if flashing: number of 10ms ticks, instead of count  (0 = forever)
+                //              if ON, number of 10ms ticks to stay on (0 = forever)
+               // led_set_state(qs_led_a, ATMO_LED, LED_MODE_FLASH,LED_RATE_FAST,0,0);
+					
                 // Allow short delay for wear sensor to initialise, before checking its state
                 pwr_state = PWR_STATE_DELAY_ON;
                 break;
