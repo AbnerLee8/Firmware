@@ -35,4 +35,3 @@ MP_AS_DIR="D:\Program Files\Microchip\xc32\v4.45\bin"
 MP_LD_DIR="D:\Program Files\Microchip\xc32\v4.45\bin"
 MP_AR_DIR="D:\Program Files\Microchip\xc32\v4.45\bin"
 DFP_DIR=C:/Users/risun/.mchp_packs/Microchip/SAMD51_DFP/3.8.246
-CMSIS_DIR=

@@ -127,8 +127,8 @@ void PORT_Initialize(void)
    PORT_REGS->GROUP[1].PORT_PINCFG[17] = 0x0U;//Atmosphere  MCU_UART_LED_POWER_EN PWR EN 
    PORT_REGS->GROUP[1].PORT_PINCFG[22] = 0x0U;
    PORT_REGS->GROUP[1].PORT_PINCFG[23] = 0x5U;
-   PORT_REGS->GROUP[1].PORT_PINCFG[24] = 0x1U;
-   PORT_REGS->GROUP[1].PORT_PINCFG[25] = 0x1U;
+   PORT_REGS->GROUP[1].PORT_PINCFG[24] = 0x1U;//debug com0
+   PORT_REGS->GROUP[1].PORT_PINCFG[25] = 0x1U;//debug com0
    PORT_REGS->GROUP[1].PORT_PINCFG[30] = 0x0U;
    PORT_REGS->GROUP[1].PORT_PINCFG[31] = 0x0U;
 
@@ -141,7 +141,7 @@ void PORT_Initialize(void)
    PORT_REGS->GROUP[1].PORT_PMUX[7] = 0x0U;
    PORT_REGS->GROUP[1].PORT_PMUX[8] = 0x0U;
    PORT_REGS->GROUP[1].PORT_PMUX[11] = 0x0U;
-   PORT_REGS->GROUP[1].PORT_PMUX[12] = 0x22U;
+   PORT_REGS->GROUP[1].PORT_PMUX[12] = 0x22U;//debug com0 function C
    PORT_REGS->GROUP[1].PORT_PMUX[15] = 0x0U;
 
    /************************** GROUP 2 Initialization *************************/
@@ -174,7 +174,7 @@ void PORT_Initialize(void)
    PORT_REGS->GROUP[2].PORT_PMUX[6] = 0x0U;
    PORT_REGS->GROUP[2].PORT_PMUX[7] = 0x0U;
   // PORT_REGS->GROUP[2].PORT_PMUX[8] = 0x0U;
-   PORT_REGS->GROUP[2].PORT_PMUX[8] = 0x22U;//Atmosphere LED SPI
+   PORT_REGS->GROUP[2].PORT_PMUX[8] = 0x22U;//Atmosphere LED function c sercom to SPI
    PORT_REGS->GROUP[2].PORT_PMUX[9] = 0x20U;//
    PORT_REGS->GROUP[2].PORT_PMUX[10] = 0x0U;
    PORT_REGS->GROUP[2].PORT_PMUX[12] = 0x20U;

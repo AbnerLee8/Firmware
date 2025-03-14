@@ -478,11 +478,13 @@ void APP_PWR_Tasks ( void )
                 } else if (b_l_enc_has_been_released()) {
                     // Button has been released, soo not pressed long enough, so power down
                     // Send message to Airoha, and start timer
+                     printf("power state power off\n");
                     power_state_delay_power_off();
                     pwr_state = PWR_STATE_DELAY_POWER_OFF;
                 } else if (b_timeout) {
                     // Probably a bug if we get here.
                     // Power up everything
+                    printf("power state power on\n");
                     pwr_state = PWR_STATE_POWER_ON;
 					
                 }

@@ -249,7 +249,7 @@ void APP_MIC_Tasks ( void )
             if (qs_mic.event == MIC_MUTE_TOGGLE) {
                 // Process the Mic Mute toggle event
                 mic_mute_toggle(qs_mic.event);
-                DBGprintf("Toggle mute status\n");
+                printf("Toggle mute status\n");
             }
         }
         OS_SLEEP(10); //osDelayMs(10);

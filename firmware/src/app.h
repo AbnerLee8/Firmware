@@ -142,10 +142,7 @@ typedef struct {
 #define LED_RED     0       // Left
 #define LED_GREEN   1       // Left
 #define LED_MIC     2       // Left
-#define LED_BLUE    3      // Right
-#define ATMO_LED    4       // Left ATMOSPHERE_LED
-
-
+#define LED_BLUE    3       // Right
 
 #define TICKS_MS(x) (x/10)
 

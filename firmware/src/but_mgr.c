@@ -200,7 +200,7 @@ void BUT_MGR_Tasks ( void )
         // Messages to the Button Manager, from button/encoder task - button events
         if (osQueueReceive(Q_bm_but, &qs_but, 1) == pdPASS)
         {
-           // DBGprintf("BUTENC %d %d\n", qs_but.event, qs_but.pos);
+           DBGprintf("BUTENC %d %d\n", qs_but.event, qs_but.pos);
             printf("BUTENC %d %d\n", qs_but.event, qs_but.pos);
             switch (qs_but.event) {
                 //
@@ -253,7 +253,7 @@ void BUT_MGR_Tasks ( void )
                     // Cycle to the next ANC Mode
 //                    dsp_anc_mode_cycle();
 // send message to Air
-					btc_but_action(BTC_BUT_ANC_CYCLE);
+				//	btc_but_action(BTC_BUT_ANC_CYCLE);
 
 
                     break;

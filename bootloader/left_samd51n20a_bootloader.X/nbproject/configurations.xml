@@ -361,7 +361,6 @@
       </toolsSet>
       <packs>
         <pack name="SAMD51_DFP" vendor="Microchip" version="3.8.246"/>
-        <pack name="CMSIS" vendor="ARM" version="6.1.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

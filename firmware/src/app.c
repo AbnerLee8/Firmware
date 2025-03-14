@@ -33,7 +33,7 @@ encoder_config_t ENCconfig[2];
 // The queues
 // .............................................................................
 QueueHandle_t Q_pwr;
-//QueueHandle_t Q_pwr_sns;
+QueueHandle_t Q_pwr_sns;
 QueueHandle_t Q_enc;
 QueueHandle_t Q_enc_mcu;
 QueueHandle_t Q_led;

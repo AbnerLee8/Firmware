@@ -903,8 +903,11 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;APP3_C&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;app_gui.c&lt;/Value&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app_enc.c&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -916,8 +919,11 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;APP3_H&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;app_gui.h&lt;/Value&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app_enc.h&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -933,7 +939,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
       &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;app_enc.c&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app_pwr.c&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -949,7 +955,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
       &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;app_enc.h&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app_pwr.h&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -965,7 +971,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
       &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;app_pwr.c&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app_com.c&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -981,7 +987,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
       &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;app_pwr.h&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app_com.h&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -994,10 +1000,10 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;APP6_C&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
       &lt;/Boolean&gt;
       &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;app_com.c&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app.c&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -1010,10 +1016,10 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;APP6_H&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
       &lt;/Boolean&gt;
       &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;app_com.h&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app.h&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -3442,7 +3448,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_ENABLE_3&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -3452,7 +3458,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="GEN_APP_TASK_ENABLE_4"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_ENABLE_4&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
 </value>
@@ -3461,7 +3469,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="GEN_APP_TASK_ENABLE_5"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_ENABLE_5&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
 </value>
@@ -3470,7 +3480,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="GEN_APP_TASK_ENABLE_6"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_ENABLE_6&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
 </value>
@@ -3632,7 +3644,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_NAME_3&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;app_gui&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;app_enc&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -3643,7 +3655,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_NAME_4&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;app_enc&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;app_pwr&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -3654,7 +3666,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_NAME_5&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;app_pwr&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;app_com&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -3665,7 +3677,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_NAME_6&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;app_com&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;app&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -4035,7 +4047,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;673&quot; canvasWidth=&quot;938&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;GraphSettings canvasHeight=&quot;673&quot; canvasWidth=&quot;746&quot; dnOrder=&quot;0&quot;/&gt;
     &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
       &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
     &lt;/PowerProfiles&gt;
@@ -4056,13 +4068,13 @@
         &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;pdec&quot; x=&quot;18&quot; y=&quot;94&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;pm&quot; x=&quot;181&quot; y=&quot;84&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;qspi&quot; x=&quot;19&quot; y=&quot;423&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;sercom0&quot; x=&quot;682&quot; y=&quot;160&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;sercom0&quot; x=&quot;494&quot; y=&quot;541&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;sercom1&quot; x=&quot;437&quot; y=&quot;155&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;sercom3&quot; x=&quot;183&quot; y=&quot;269&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;sercom4&quot; x=&quot;310&quot; y=&quot;270&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;18&quot; id=&quot;sercom5&quot; x=&quot;438&quot; y=&quot;269&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;19&quot; id=&quot;sercom6&quot; x=&quot;598&quot; y=&quot;254&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;20&quot; id=&quot;stdio&quot; x=&quot;856&quot; y=&quot;243&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;20&quot; id=&quot;stdio&quot; x=&quot;721&quot; y=&quot;508&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;21&quot; id=&quot;sys_fs&quot; x=&quot;506&quot; y=&quot;400&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;22&quot; id=&quot;sys_time&quot; x=&quot;156&quot; y=&quot;517&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;23&quot; id=&quot;tc0&quot; x=&quot;19&quot; y=&quot;184&quot;/&gt;
@@ -5441,7 +5453,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_46_0_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5452,7 +5464,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_46_0_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;SERCOM0_USART_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;SERCOM0_0_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5463,7 +5475,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_46_0_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5474,7 +5486,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_47_0_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5485,7 +5497,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_47_0_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;SERCOM0_USART_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;SERCOM0_1_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5496,7 +5508,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_47_0_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5507,7 +5519,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_48_0_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5518,7 +5530,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_48_0_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;SERCOM0_USART_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;SERCOM0_2_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5529,7 +5541,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_48_0_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5540,7 +5552,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_49_0_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5551,7 +5563,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_49_0_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;SERCOM0_USART_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;SERCOM0_OTHER_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5562,7 +5574,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_49_0_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15519,7 +15531,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_0_INTERRUPT_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15530,7 +15542,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_0_INTERRUPT_ENABLE_UPDATE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15541,7 +15553,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_0_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;SERCOM0_USART_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;SERCOM0_0_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15552,7 +15564,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_0_INTERRUPT_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15563,7 +15575,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_1_INTERRUPT_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15574,7 +15586,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_1_INTERRUPT_ENABLE_UPDATE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15585,7 +15597,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_1_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;SERCOM0_USART_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;SERCOM0_1_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15596,7 +15608,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_1_INTERRUPT_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15607,7 +15619,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_2_INTERRUPT_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15618,7 +15630,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_2_INTERRUPT_ENABLE_UPDATE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15629,7 +15641,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_2_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;SERCOM0_USART_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;SERCOM0_2_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15640,7 +15652,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_2_INTERRUPT_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15673,7 +15685,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_OTHER_INTERRUPT_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15684,7 +15696,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_OTHER_INTERRUPT_ENABLE_UPDATE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15695,7 +15707,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_OTHER_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;SERCOM0_USART_InterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;SERCOM0_OTHER_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15706,7 +15718,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_OTHER_INTERRUPT_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -21527,45 +21539,6 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_SPIM_COMMON_HEADER"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
-  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_SPIM_COMMON_HEADER&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/sercom0&gt;
-&lt;/sercom0&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_SPIM_HEADER"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
-  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_SPIM_HEADER&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/sercom0&gt;
-&lt;/sercom0&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_SPIM_SOURCE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
-  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_SPIM_SOURCE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-  &lt;/sercom0&gt;
-&lt;/sercom0&gt;
-</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_SYNCBUSY"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_SYNCBUSY&quot;&gt;
@@ -21761,14 +21734,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_BAUD_RATE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_RATE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;12000000&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
 </value>
@@ -21778,7 +21744,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;11&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
@@ -21878,14 +21844,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_DIPO"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_DIPO&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;3&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
 </value>
@@ -21912,14 +21871,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_INTERRUPT_MODE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_INTERRUPT_MODE&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
 </value>
@@ -22085,9 +22037,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_FORM"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_FORM&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;0&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
 </value>
@@ -22124,7 +22074,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_INTERRUPT_MODE_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
@@ -22165,12 +22115,11 @@
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_OPERATING_MODE&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;0&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
@@ -22273,7 +22222,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_RUNSTDBY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
@@ -22283,12 +22232,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_RXPO"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_RXPO&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
-      &lt;/Boolean&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom0&gt;
@@ -28395,7 +28339,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;stdio&gt;
   &lt;stdio dnOrder=&quot;0&quot; id=&quot;STDIN_BUFF_MODE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/stdio&gt;
 &lt;/stdio&gt;
@@ -28406,7 +28350,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;stdio&gt;
   &lt;stdio dnOrder=&quot;0&quot; id=&quot;STDOUT_BUFF_MODE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/stdio&gt;
 &lt;/stdio&gt;
@@ -33384,7 +33328,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\definitions.h</file>
-         <hash>e84270ce89083be4b79aca8d69757c11d7fbd1974527d3d5a499ad01f5d78409</hash>
+         <hash>b1f68ae313d8e50e5161405d772607bc4d16094cdddb02124831beb0036defed</hash>
       </entry>
       <entry>
          <file>..\src\config\default\device.h</file>
@@ -33456,7 +33400,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\initialization.c</file>
-         <hash>cb419143c426c8aec84b75f53e13b24db85ca80999c76c675295299b6d4b62b7</hash>
+         <hash>a8be9a2ba4de3130d3280eb7a8f89f5f6c5ec4def9a28c40fa40eb2a5dbede88</hash>
       </entry>
       <entry>
          <file>..\src\config\default\interrupts.c</file>
@@ -33616,7 +33560,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\usart\plib_sercom0_usart.c</file>
-         <hash>c8f4cd96d7eb8bcfdc140fc12024a8b9d978f78ea71b1abd06938d20cd3af932</hash>
+         <hash>060f005cb553014e520e7ca16277e0f5d4576168a5eacf4437cd23a9efcbc1f5</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\usart\plib_sercom0_usart.h</file>
