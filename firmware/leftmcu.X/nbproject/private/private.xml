@@ -2,6 +2,26 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/work/Firmware/firmware/src/large_files.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/json/json_profiles.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/json/json_proc.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/json/json_parser.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/json/json_funcs.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/json/json_data.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/json/json_build.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/json/json.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/json/jsmn.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/hw_qmi8658a.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/json/jsmn.c</file>
+            <file>file:/D:/work/Firmware/firmware/src/json/json_build.c</file>
+            <file>file:/D:/work/Firmware/firmware/src/config/default/tasks.c</file>
+            <file>file:/D:/work/Firmware/firmware/src/app_atmo.c</file>
+            <file>file:/D:/work/Firmware/firmware/src/app_com.c</file>
+            <file>file:/D:/work/Firmware/firmware/src/app_sns.h</file>
+            <file>file:/D:/work/Firmware/firmware/src/app_sns.c</file>
+            <file>file:/D:/work/Firmware/firmware/src/config/default/initialization.c</file>
+            <file>file:/D:/work/Firmware/firmware/src/config/default/exceptions.c</file>
+        </group>
     </open-files>
 </project-private>

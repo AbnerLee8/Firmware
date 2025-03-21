@@ -785,8 +785,8 @@ void TimerCallback(TC_TIMER_STATUS status, uintptr_t context)
         }
     }
 
-    // MFB_L
-    if (MFB_L_Get()) {
+    // SW1_MCU_MIC_MUTE
+    if (SW1_MCU_MIC_MUTE_Get()) {
         // button up
         but_dn_cnt[1] = 0;                                                              // Up/Down Counters
         but_up_cnt[1]++;                                                                // Note: Can flag EITHER event depending on UP counter

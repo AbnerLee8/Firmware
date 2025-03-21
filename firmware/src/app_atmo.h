@@ -40,22 +40,28 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
-#define USER_RGB_NUMBER 6
+#define USER_RGB_NUMBER 4
 // #define USER_RGB_CODE0  0X40
 // #define USER_RGB_CODE1  0X70
-#define USER_RGB_CODE0  0X60
-#define USER_RGB_CODE1  0X78
+//#define USER_RGB_CODE0  0X60
+//#define USER_RGB_CODE1  0X7E
+#define USER_RGB_CODE0  0X8
+#define USER_RGB_CODE1  0XE
+
+
+#define USER_RGB_BUFF_MALLOC_EN 0//rgb buffer、spi buff dynamic malloc memory or not
+
 #define BIT(n) (0x01<<n)
 typedef struct _USER_RGB_COLOUR_{
-    unsigned char g;
     unsigned char r;
+    unsigned char g;  
     unsigned char b;
 }RGB_COLOUR;
 
 typedef struct _USER_RGB_SPI_DATA_COLOUR_{
-    unsigned char g[8];
-    unsigned char r[8];
-    unsigned char b[8];
+    unsigned char r[4];
+    unsigned char g[4];
+    unsigned char b[4];
 }SPI_COLOUR;
 
 typedef struct _USER_RGB_CODE_{
@@ -68,21 +74,112 @@ typedef struct _USER_RGB_INFO_{
     unsigned char power_off;
     unsigned char init_flag;
     unsigned char rend_flag;
-    unsigned char updata_flag;//???
-    unsigned char   updata_only;//??
+    unsigned char updata_flag;//light colour update flag
+    unsigned char updata_only;//only update data once
     RGB_CODE code;
-    //unsigned char spi_port;//spi
-    unsigned short number;//???????
-    unsigned short spi_scan_time;//spi ??
+    unsigned short number;//light numbers
     
     #if USER_RGB_BUFF_MALLOC_EN
-    RGB_COLOUR *rgb_buff;//[USER_RGB_NUMBER];//????? ??buff
-    SPI_COLOUR *spi_buff;//[USER_RGB_NUMBER] __attribute__((aligned(4)));//spi ????buff
+    RGB_COLOUR *rgb_buff;//[USER_RGB_NUMBER];//rgb light buff
+    SPI_COLOUR *spi_buff;//[USER_RGB_NUMBER] __attribute__((aligned(4)));//spi data buff
     #elif (defined(USER_RGB_NUMBER) && USER_RGB_NUMBER)
-    RGB_COLOUR rgb_buff[USER_RGB_NUMBER];//????? ??buff
-    SPI_COLOUR spi_buff[USER_RGB_NUMBER] __attribute__((aligned(4)));//spi ????buff
+    RGB_COLOUR rgb_buff[USER_RGB_NUMBER];//rgb light buff
+    SPI_COLOUR spi_buff[USER_RGB_NUMBER] __attribute__((aligned(4)));//spi data buff
     #endif
 }RGB_INFO;
+
+#define USER_RGB_LOOP_MODE_1    1//all
+#define USER_RGB_LOOP_MODE_2    2//Non monochromatic flicker cycle
+#define USER_RGB_LOOP_MODE_3    3//monochromatic flicker cycle
+	
+#define USER_RGB_SPI_SEND_SCAN_TIME  (10)//Interval time
+	
+
+    /*Maximum brightness level, please note that the data type value should not exceed the range. Normally, use 8-bit LED beads with a maximum value not exceeding 255. Use 4k LED beads. Please modify the data type level*/
+#define RGB_BRIGHTNESS_LEVEL  (180)
+
+	/*
+	Used as a fade in/fade out threshold for controlling lights
+	Divide brightness into several levels (segments)
+	eg.
+	RGB_BRIGHTNESS_LEVEL ：120
+	RGB_BRIGHTNESS_SEGMENT：4
+	Lights with brightness less than 120/4 are considered fade in
+	Brightness greater than 120/4 and less than (120/4) * 2 is considered fading out
+	*/
+#define RGB_BRIGHTNESS_SEGMENT (5)
+	
+	typedef struct _USER_RGB_DISPLAY_DATA_{
+		int sys_vol_max;
+		int sys_vol;
+		int bass;
+		unsigned short display_time;//interrupt Interval time unit seconds
+	}RGB_DISPLAY_DATA;
+	
+	typedef enum{
+		USER_RGB_MODE_1=1,//Rhythm gradient rotation
+		USER_RGB_MODE_2,//Symmetrical lifting and lowering
+		USER_RGB_MODE_3,//Flowing light display
+		USER_RGB_MODE_4,//Tricolor rotation
+		USER_RGB_MODE_5,//Panchromatic respiration
+		USER_RGB_MODE_6,//spectrum
+		USER_RGB_MODE_OFF,//turn off
+		USER_RGB_MODE_7,//start  
+		USER_RGB_MODE_8,//poweroff
+		USER_RGB_MODE_9,//white blink
+		USER_RGB_MODE_MAX,
+	
+		USER_RGB_FM_MODE,//FM
+		USER_RGB_AUTO_SW,//auto switch
+		USER_RGB_SYS_VOL,//sys volume
+		USER_RGB_EQ_BASS,//BASS state
+		USER_RGB_STATUS,
+		USER_RGB_STATUS_LOCK,
+		USER_RGB_STATUS_ULOCK,
+		USER_RGB_NULL,
+	}USER_GRB_MODE;
+	
+	typedef struct _USER_RGB_FUN_{
+		RGB_INFO *info;
+		bool interrupt;//Interrupt flag is used for displaying volume and other non modal effects
+		unsigned short interrupt_id;//Interrupt task id bass, vol display common this id
+		
+    #if(defined(USER_RGB_NUMBER) && USER_RGB_NUMBER)
+		unsigned char brightness_table[USER_RGB_NUMBER];//light brightness level table
+    #endif
+		unsigned char step_value; //light brightness level step value
+	
+		USER_GRB_MODE cur_mode;//current mode
+		USER_GRB_MODE mode_lock;//lock mode
+		unsigned short mode_scan_time;//Mode scanning time
+		RGB_COLOUR cur_colour;//current colour
+		int light_number;//dac energy lights
+		unsigned short freq;//Monochromatic RGB flicker frequency
+		unsigned short dac_energy_scan_id;//Dac energy scanning time id
+	}RGB_FUN;
+	
+void user_rgb_fun_init(void);
+unsigned char user_rgb_mode_set_or_get(USER_GRB_MODE mode,void *priv);
+void user_rgb_display_vol(unsigned char vol,unsigned short display_time);
+void user_rgb_display_bass(unsigned char bass,unsigned short display_time);
+void user_rgb_fun_exit(void);
+
+void *user_rgb_dev_init(void *priv);
+void user_rgb_dev_exit(void);
+
+void *user_rgb_dev_init(void *priv);
+void user_rgb_dev_exit(void);
+
+
+//Set the color of a single light
+void user_rgb_colour_only_set(void *priv, RGB_COLOUR *colour, signed short number);
+//Set to the same color
+void user_rgb_same_colour(void *priv,RGB_COLOUR *colour);
+//clear colour
+void user_rgb_clear_colour(void *priv);
+//send once spi buffer data
+void user_rgb_spi_send_once(void);
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Type Definitions
@@ -105,6 +202,7 @@ typedef enum
     /* Application's state machine's initial state. */
     APP_ATMO_STATE_INIT=0,
     APP_ATMO_STATE_SERVICE_TASKS,
+    APP_ATMO_STATE_SHOW_ONECE,
     /* TODO: Define states used by the application state machine. */
 
 } APP_ATMO_STATES;

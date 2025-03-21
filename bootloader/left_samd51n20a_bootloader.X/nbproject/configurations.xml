@@ -59,12 +59,6 @@
               <itemPath>../src/config/default/peripheral/qspi/plib_qspi.h</itemPath>
               <itemPath>../src/config/default/peripheral/qspi/plib_qspi_common.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
-              <logicalFolder name="usart" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom0_usart.h</itemPath>
-                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
-              </logicalFolder>
-            </logicalFolder>
           </logicalFolder>
           <logicalFolder name="system" displayName="system" projectFiles="true">
             <logicalFolder name="cache" displayName="cache" projectFiles="true">
@@ -294,11 +288,6 @@
             </logicalFolder>
             <logicalFolder name="qspi" displayName="qspi" projectFiles="true">
               <itemPath>../src/config/default/peripheral/qspi/plib_qspi.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
-              <logicalFolder name="usart" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom0_usart.c</itemPath>
-              </logicalFolder>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">

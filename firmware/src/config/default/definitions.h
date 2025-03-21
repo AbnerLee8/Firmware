@@ -54,8 +54,8 @@
 #include "peripheral/tc/plib_tc1.h"
 #include "peripheral/tc/plib_tc0.h"
 #include "peripheral/tc/plib_tc2.h"
-#include "peripheral/tc/plib_tc4.h"
 #include "peripheral/pdec/plib_pdec.h"
+#include "peripheral/tc/plib_tc4.h"
 #include "system/time/sys_time.h"
 #include "peripheral/tc/plib_tc7.h"
 #include "system/int/sys_int.h"
@@ -64,8 +64,8 @@
 #include "system/debug/sys_debug.h"
 #include "peripheral/sercom/i2c_master/plib_sercom3_i2c_master.h"
 #include "peripheral/sercom/usart/plib_sercom1_usart.h"
-#include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/sercom/usart/plib_sercom0_usart.h"
+#include "peripheral/evsys/plib_evsys.h"
 #include "driver/mx25l/drv_mx25l.h"
 #include "peripheral/sercom/spi_master/plib_sercom6_spi_master.h"
 #include "peripheral/port/plib_port.h"
@@ -85,7 +85,7 @@
 #include "system/fs/fat_fs/hardware_access/diskio.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "app_atmo.h"
+#include "app_right_sns.h"
 #include "app_sns.h"
 #include "app_mic.h"
 #include "app_enc.h"
@@ -93,6 +93,7 @@
 #include "app_com.h"
 #include "app_mem.h"
 #include "but_mgr.h"
+#include "app_atmo.h"
 #include "app_json.h"
 
 
@@ -112,7 +113,7 @@ extern "C" {
 #define DEVICE_SERIES		 "SAMD51"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 48000000
+#define CPU_CLOCK_FREQUENCY 120000000
 
 // *****************************************************************************
 // *****************************************************************************

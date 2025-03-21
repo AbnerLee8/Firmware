@@ -86,8 +86,7 @@ extern "C" {
 #define SYS_FS_VOLUME_NUMBER              (1U)
 
 #define SYS_FS_AUTOMOUNT_ENABLE           true
-//#define SYS_FS_CLIENT_NUMBER              1U
-#define SYS_FS_CLIENT_NUMBER              2U        // !dbg!
+#define SYS_FS_CLIENT_NUMBER              1U
 #define SYS_FS_MAX_FILES                  (1U)
 #define SYS_FS_MAX_FILE_SYSTEM_TYPE       (1U)
 #define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)

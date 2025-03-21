@@ -16,7 +16,9 @@ volatile bool boom_mic_connected;
 void mic_boom_enable()
 {
     printf("mic boom en\n");
-    VDD_MIC_EN_Set();
+//    VDD_MIC_EN_Set();
+//   PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 0U);
+//	PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 1U);
     //dsp_boom_mic_enable();
     
 }
@@ -27,7 +29,9 @@ void mic_boom_enable()
 void mic_boom_disable()
 {
      printf("mic boom dis\n");
-    VDD_MIC_EN_Clear();
+//    VDD_MIC_EN_Clear();
+//	 PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 0U);
+//	 PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 1U);
     //dsp_boom_mic_disable();
 }
 
@@ -150,14 +154,17 @@ void mic_monitor_connection()
            // BOOM Microphone has just been disconnected:
             
             boom_mic_connected = false;
+		   VDD_MIC_EN_Clear();
             // Boom MIC Led OFF (no point having it on when boom mic disconnected!)
             led_set_state(qs_led_mic, LED_MIC, LED_MODE_OFF, 0, 0, 0);
             if (mic_muted) {
+				printf("Boom mic disconnect mic mute\n");
                 // 1. Boom mic just disconnected, and mic muted
                 // Make sure all mic's disabled
                // dsp_mute_all_mics();                
                 
             } else {
+                printf("Boom mic disconnect mic unmute\n");
                 // 2. Boom mic just disconnected, and mic unmuted
                 // Not muted, so need to disable the boom mic and enable the talk mics
                 //dsp_using_dmics();        
@@ -165,12 +172,15 @@ void mic_monitor_connection()
         }
     } else {
         // Boom MIC is  connected
+        
         if (!boom_mic_connected) {
 
            // BOOM Microphone has just been connected:
 
             boom_mic_connected = true;
+		     VDD_MIC_EN_Set();
             if (mic_muted) {
+				printf("Boom mic connected mic mute\n");
                 // 3. Boom mic just connected, and mic muted
                 // Make sure all mic's still disabled
                // dsp_mute_all_mics();                
@@ -178,6 +188,7 @@ void mic_monitor_connection()
                 // Boom MIC Led ON
                 led_set_state(qs_led_mic, LED_MIC, LED_MODE_ON, 0, 0, 0);
             } else {
+				printf("Boom mic connected mic unmute\n");
                 // 4. Boom mic just connected, and mic unmuted
                 // Make sure boom mic Enabled and Talk mics Disabled
                 //dsp_using_boom_mic();
@@ -202,7 +213,8 @@ void mic_init()
     // Make sure Boom MIC Led is OFF
     led_set_state(qs_led_mic, LED_MIC, LED_MODE_OFF, 0, 0, 0);
     // Make sure Boom mic Enabled, and Talk mics Disabled
-    //dsp_using_dmics();               
+    //dsp_using_dmics();     
+    VDD_MIC_EN_OutputEnable();
     
 }
     

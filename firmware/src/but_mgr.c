@@ -243,7 +243,7 @@ void BUT_MGR_Tasks ( void )
                 case LEFT_ENCODER_STOP:
                     // Update ChatMix
                     // send message to Air
-//                  json_fn_i_chat_mix(qs_but.pos);
+                  json_fn_i_chat_mix(qs_but.pos);
 
                     break;
                 //
@@ -253,7 +253,7 @@ void BUT_MGR_Tasks ( void )
                     // Cycle to the next ANC Mode
 //                    dsp_anc_mode_cycle();
 // send message to Air
-				//	btc_but_action(BTC_BUT_ANC_CYCLE);
+					btc_but_action(BTC_BUT_ANC_CYCLE);
 
 
                     break;

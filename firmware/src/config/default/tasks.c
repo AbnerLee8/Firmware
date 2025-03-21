@@ -60,14 +60,14 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
-/* Handle for the APP_ATMO_Tasks. */
-TaskHandle_t xAPP_ATMO_Tasks;
+/* Handle for the APP_RIGHT_SNS_Tasks. */
+TaskHandle_t xAPP_RIGHT_SNS_Tasks;
 
-static void lAPP_ATMO_Tasks(  void *pvParameters  )
+static void lAPP_RIGHT_SNS_Tasks(  void *pvParameters  )
 {   
     while(true)
     {
-        APP_ATMO_Tasks();
+        APP_RIGHT_SNS_Tasks();
         vTaskDelay(50U / portTICK_PERIOD_MS);
     }
 }
@@ -148,7 +148,17 @@ static void lBUT_MGR_Tasks(  void *pvParameters  )
         vTaskDelay(50U / portTICK_PERIOD_MS);
     }
 }
+/* Handle for the APP_ATMO_Tasks. */
+TaskHandle_t xAPP_ATMO_Tasks;
 
+static void lAPP_ATMO_Tasks(  void *pvParameters  )
+{   
+    while(true)
+    {
+        APP_ATMO_Tasks();
+        vTaskDelay(50U / portTICK_PERIOD_MS);
+    }
+}
 /* Handle for the APP_JSON_Tasks. */
 TaskHandle_t xAPP_JSON_Tasks;
 
@@ -210,13 +220,13 @@ void SYS_Tasks ( void )
     
 
     /* Maintain the application's state machine. */
-        /* Create OS Thread for APP_ATMO_Tasks. */
-    (void) xTaskCreate((TaskFunction_t) lAPP_ATMO_Tasks,
-                "APP_ATMO_Tasks",
+        /* Create OS Thread for APP_RIGHT_SNS_Tasks. */
+    (void) xTaskCreate((TaskFunction_t) lAPP_RIGHT_SNS_Tasks,
+                "APP_RIGHT_SNS_Tasks",
                 512,
                 NULL,
                 1,
-                &xAPP_ATMO_Tasks);
+                &xAPP_RIGHT_SNS_Tasks);
 
     /* Create OS Thread for APP_SNS_Tasks. */
     (void) xTaskCreate((TaskFunction_t) lAPP_SNS_Tasks,
@@ -281,6 +291,16 @@ void SYS_Tasks ( void )
                 NULL,
                 1,
                 &xAPP_JSON_Tasks);
+
+    /* Maintain the application's state machine. */
+        /* Create OS Thread for APP_ATMO_Tasks. */
+    (void) xTaskCreate((TaskFunction_t) lAPP_ATMO_Tasks,
+                "APP_ATMO_Tasks",
+                512,
+                NULL,
+                1,
+                &xAPP_ATMO_Tasks);
+
 
 
 

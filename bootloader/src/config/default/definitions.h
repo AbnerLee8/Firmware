@@ -48,8 +48,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "peripheral/qspi/plib_qspi.h"
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
+#include "peripheral/qspi/plib_qspi.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "driver/mx25l/drv_mx25l.h"
 #include "system/fs/sys_fs.h"
@@ -68,6 +68,7 @@
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "app.h"
 
 
 

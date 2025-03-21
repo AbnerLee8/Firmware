@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: leftmcu
-creation_date: 2025-03-13T21:02:28.429+08:00[Asia/Shanghai]
+creation_date: 2025-03-21T21:07:56.236+08:00[Asia/Shanghai]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -11,7 +11,7 @@ compiler: XC32 4.45
 mcc_version: 5.5.1
 mcc_core_version: 5.7.1
 content_manager_version: 5.0.1
-is_mcc_offline: false
+is_mcc_offline: true
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/
 device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name: Harmony

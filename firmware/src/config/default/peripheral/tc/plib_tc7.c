@@ -123,7 +123,7 @@ void TC7_CompareStop( void )
 
 uint32_t TC7_CompareFrequencyGet( void )
 {
-    return (uint32_t)(3000000UL);
+    return (uint32_t)(7500000UL);
 }
 
 void TC7_CompareCommandSet(TC_COMMAND command)

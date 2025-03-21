@@ -57,8 +57,8 @@
 // Section: RTOS "Tasks" Handles
 // *****************************************************************************
 // *****************************************************************************
-/* Declaration of  APP_ATMO_Tasks task handle */
-extern TaskHandle_t xAPP_ATMO_Tasks;
+/* Declaration of  APP_RIGHT_SNS_Tasks task handle */
+extern TaskHandle_t xAPP_RIGHT_SNS_Tasks;
 
 /* Declaration of  APP_SNS_Tasks task handle */
 extern TaskHandle_t xAPP_SNS_Tasks;
@@ -80,6 +80,9 @@ extern TaskHandle_t xAPP_MEM_Tasks;
 
 /* Declaration of  BUT_MGR_Tasks task handle */
 extern TaskHandle_t xBUT_MGR_Tasks;
+
+/* Declaration of  APP_ATMO_Tasks task handle */
+extern TaskHandle_t xAPP_ATMO_Tasks;
 
 /* Declaration of  APP_JSON_Tasks task handle */
 extern TaskHandle_t xAPP_JSON_Tasks;

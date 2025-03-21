@@ -63,7 +63,7 @@
 #define SERCOM5_I2CM_SPEED_HZ           100000
 
 /* sercom5 I2C baud value */
-#define SERCOM5_I2CM_BAUD_VALUE         (0x72U)
+#define SERCOM5_I2CM_BAUD_VALUE         (0xFFU)
 
 
 volatile static SERCOM_I2C_OBJ sercom5I2CObj;
@@ -203,7 +203,7 @@ bool  SERCOM5_I2C_TransferSetup(SERCOM_I2C_TRANSFER_SETUP* setup, uint32_t srcCl
 
     if( srcClkFreq == 0U)
     {
-        srcClkFreq = 24000000UL;
+        srcClkFreq = 60000000UL;
     }
 
     if ( SERCOM5_I2C_CalculateBaudValue(srcClkFreq, i2cClkSpeed, &baudValue) == false)

@@ -82,6 +82,19 @@ void SYS_Tasks ( void )
     DRV_MEMORY_Tasks(sysObj.drvMemory0);
 
     bootloader_SERIAL_MEMORY_Tasks();
+
+
+
+    /* Maintain Middleware & Other Libraries */
+    
+
+    /* Maintain the application's state machine. */
+        /* Call Application task APP. */
+       APP_Tasks();
+
+
+
+
 }
 
 /*******************************************************************************
