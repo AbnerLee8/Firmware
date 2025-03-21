@@ -14,7 +14,7 @@
 #include "app_sns.h"
 #include "hw_hx32062se.h"
 #include "hw_qmi8658a.h"
-
+#include "max77985.h"
 // ...........................................
 // Charger
 // ...........................................
@@ -399,6 +399,9 @@ void APP_SNS_Tasks ( void )
             
     // Accelerometer
     accel_init();
+
+    //init charger
+    charger_init();
     
     // Always save last movement counter, so can tell if any movement since last check
     INT_G_cnt_previous = INT_G_cnt;
