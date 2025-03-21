@@ -119,14 +119,14 @@ extern void EVSYS_3_Handler            ( void ) __attribute__((weak, alias("Dumm
 extern void EVSYS_OTHER_Handler        ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void PAC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void RAMECC_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void SERCOM0_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void SERCOM0_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void SERCOM0_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void SERCOM0_OTHER_Handler      ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM2_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM2_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM2_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM2_OTHER_Handler      ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void SERCOM6_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void SERCOM6_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void SERCOM6_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void SERCOM6_OTHER_Handler      ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM7_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM7_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SERCOM7_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -277,10 +277,10 @@ const H3DeviceVectors exception_table=
     .pfnSERCOM5_1_Handler          = SERCOM5_I2C_InterruptHandler,
     .pfnSERCOM5_2_Handler          = SERCOM5_I2C_InterruptHandler,
     .pfnSERCOM5_OTHER_Handler      = SERCOM5_I2C_InterruptHandler,
-    .pfnSERCOM6_0_Handler          = SERCOM6_USART_InterruptHandler,
-    .pfnSERCOM6_1_Handler          = SERCOM6_USART_InterruptHandler,
-    .pfnSERCOM6_2_Handler          = SERCOM6_USART_InterruptHandler,
-    .pfnSERCOM6_OTHER_Handler      = SERCOM6_USART_InterruptHandler,
+    .pfnSERCOM6_0_Handler          = SERCOM6_SPI_InterruptHandler,
+    .pfnSERCOM6_1_Handler          = SERCOM6_SPI_InterruptHandler,
+    .pfnSERCOM6_2_Handler          = SERCOM6_SPI_InterruptHandler,
+    .pfnSERCOM6_OTHER_Handler      = SERCOM6_SPI_InterruptHandler,
     .pfnSERCOM7_0_Handler          = SERCOM7_0_Handler,
     .pfnSERCOM7_1_Handler          = SERCOM7_1_Handler,
     .pfnSERCOM7_2_Handler          = SERCOM7_2_Handler,

@@ -56,6 +56,7 @@ bool b_accel_active = true;
 // .............................................................................
 void PowerEnable_1V8()
 {
+     printf("PwrEN1V8\n");
     osDelayMs(10);
     VDD_1V8_EN_Set();
 }
@@ -65,6 +66,7 @@ void PowerEnable_1V8()
 // .............................................................................
 void PowerEnable_3V3()
 {
+    printf("PwrEn3V3\n");
     osDelayMs(10);
     U3V3_VDD_EN_Set();
 }
@@ -75,10 +77,12 @@ void PowerEnable_3V3()
 // .............................................................................
 void PowerEnable_AMP()
 {
+    printf("PwrEnAMP\n");
     osDelayMs(10);
-    DSP_PWR_EN_Set();
+    //DSP_PWR_EN_Set();
+    AUDIO_PWR_EN_Set();
     osDelayMs(10);
-    ADAU1860_PD_Set(); // wake dsp up from power down
+    //ADAU1860_PD_Set(); // wake dsp up from power down
     osDelayMs(50);
 
 }
@@ -88,6 +92,7 @@ void PowerEnable_AMP()
 // .............................................................................
 void PowerEnable_Airoha()
 {
+    printf("PwrEnAiro\n");
     //RESET_77_Clear();   // keep the airoha in reset
     REGEN_77_Set();     // airoha regulator enable
     osDelayMs(1000);
@@ -334,17 +339,18 @@ void APP_PWR_Initialize ( void )
 void APP_PWR_Tasks ( void )
 {
     Q_but_t qs_but;
-    Q_sensors_t qs_sns;
+   // Q_sensors_t qs_sns;
     Q_led_t qs_led_r;
     Q_led_t qs_led_g;
+	Q_led_t qs_led_a;
     uint16_t bat_v;
     uint8_t bat_s;
-    bool b_accel;
+   // bool b_accel;
     bool b_timeout;
 
     // Create all the queues here
     Q_pwr = osQueueCreate(16, sizeof(Q_but_t));
-    Q_pwr_sns = osQueueCreate(16, sizeof(Q_sensors_t));
+   // Q_pwr_sns = osQueueCreate(16, sizeof(Q_sensors_t));
     Q_enc = osQueueCreate(16, sizeof(Q_but_t));
     Q_enc_mcu = osQueueCreate(16, sizeof(Q_but_t));
     Q_led = osQueueCreate(16, sizeof(Q_led_t));
@@ -357,8 +363,8 @@ void APP_PWR_Tasks ( void )
     Q_mic = osQueueCreate(16, sizeof(Q_mic_t));
         
     pwr_state = PWR_STATE_CHECK_POWER_BUTTON;
-    wear_status = WEAR_SENSOR_FAR;
-    b_accel_active = false;
+   // wear_status = WEAR_SENSOR_FAR;
+   // b_accel_active = false;
     
     b_l_enc_clear_flags();
     
@@ -371,24 +377,24 @@ void APP_PWR_Tasks ( void )
         
         // Processes any Wear Sensor and Accelerometer status messages 
         // received from the Sensor Task.
-        if (osQueueReceive(Q_pwr_sns, &qs_sns, 10) == pdPASS) {
-            wear_status = qs_sns.wear_status;
-            
-            b_accel = qs_sns.b_accel;
-            if (b_accel == true) {
-                b_accel_motion = true;                  // Motion now
-                b_accel_active = true;                  // Activity in the last N seconds
-                accel_inactive_cntr = 0;                // Reset inactivity counter
-            } else {
-                                                        // No motion now
-                if (b_accel_active == true) {           // Have flagged inactivity in last N seconds
-                    accel_inactive_cntr++;              // Counting inactivity to see if reach max
-                    if (accel_inactive_cntr >= ACCEL_INACTIVE_MAX) {
-                        b_accel_active = false;        // Inactive for the last N seconds
-                    }
-                }
-            }
-        }
+//        if (osQueueReceive(Q_pwr_sns, &qs_sns, 10) == pdPASS) {
+//            wear_status = qs_sns.wear_status;
+//            
+//            b_accel = qs_sns.b_accel;
+//            if (b_accel == true) {
+//                b_accel_motion = true;                  // Motion now
+//                b_accel_active = true;                  // Activity in the last N seconds
+//                accel_inactive_cntr = 0;                // Reset inactivity counter
+//            } else {
+//                                                        // No motion now
+//                if (b_accel_active == true) {           // Have flagged inactivity in last N seconds
+//                    accel_inactive_cntr++;              // Counting inactivity to see if reach max
+//                    if (accel_inactive_cntr >= ACCEL_INACTIVE_MAX) {
+//                        b_accel_active = false;        // Inactive for the last N seconds
+//                    }
+//                }
+//            }
+//        }
         
         // ?Processes any Power On, Power Off, Power Timeout and Battery Update 
         // messages received from other tasks.
@@ -472,45 +478,61 @@ void APP_PWR_Tasks ( void )
                 } else if (b_l_enc_has_been_released()) {
                     // Button has been released, soo not pressed long enough, so power down
                     // Send message to Airoha, and start timer
+                     printf("power state power off\n");
                     power_state_delay_power_off();
                     pwr_state = PWR_STATE_DELAY_POWER_OFF;
                 } else if (b_timeout) {
                     // Probably a bug if we get here.
                     // Power up everything
+                    printf("power state power on\n");
                     pwr_state = PWR_STATE_POWER_ON;
+					
                 }
+                
                 break;
                 
             case PWR_STATE_POWER_ON:
-                // Power up everything up
+                // Power up everything up                
                 power_state_power_on();
                 // Update state
                 led_set_state(qs_led_r, LED_RED, LED_MODE_OFF, 0, 0, 0);                    // Red:     Off
                 led_set_state(qs_led_g, LED_GREEN, LED_MODE_ON, 0, 0, 0);                   // Green:   On
+                //  qs_led:  structure to hold all the parameters and to pass on to the queue
+                //  id:      LED ID
+                //  mode:    On / OFF / Flash
+                //  rate:    (if flashing) Slow / Fast
+                //  cnt:     (if flashing) number of flashes
+                //  dur:     if flashing: number of 10ms ticks, instead of count  (0 = forever)
+                //              if ON, number of 10ms ticks to stay on (0 = forever)
+               // led_set_state(qs_led_a, ATMO_LED, LED_MODE_FLASH,LED_RATE_FAST,0,0);
+					
                 // Allow short delay for wear sensor to initialise, before checking its state
                 pwr_state = PWR_STATE_DELAY_ON;
                 break;
                 
             case PWR_STATE_DELAY_ON:
+                //printf("PWR_STATE_DELAY_ON \n");
                 if (b_timeout) {
                     // Finished the small delay after wake up, now go to Power state
                     // so can check Wear Sensor and Power button
                     pwr_state = PWR_STATE_ON;
+					printf("time out power on \n");
                 }
                 break;
                 
             case PWR_STATE_ON:
                 // Only get here from Standby
                 //if (wear_status == WEAR_SENSOR_FAR) {
-                if ((wear_status == WEAR_SENSOR_FAR) || (b_accel_active == false)) {
-                    // Headset removed from head, so inform Airoha, and start Inactivty timer
-                    power_state_standby();
-                    accel_sensitivity(ACCEL_LO_SENSE_THD, ACCEL_LO_SENSE_WIN);      // threshold = n/32g (0.125g), window = n (number of samples)
-                    // Update state
-                    led_set_state(qs_led_r, LED_RED, LED_MODE_OFF, 0, 0, 0);                    // Red:     Off
-                    led_set_state(qs_led_g, LED_GREEN, LED_MODE_FLASH, LED_RATE_SLOW, 0, 0);    // Green:   Slow Blinking
-                    pwr_state = PWR_STATE_STANDBY;
-                } else if (b_power_button) {
+//                if ((wear_status == WEAR_SENSOR_FAR) || (b_accel_active == false)) {
+//                    // Headset removed from head, so inform Airoha, and start Inactivty timer
+//                    power_state_standby();
+//                    accel_sensitivity(ACCEL_LO_SENSE_THD, ACCEL_LO_SENSE_WIN);      // threshold = n/32g (0.125g), window = n (number of samples)
+//                    // Update state
+//                    led_set_state(qs_led_r, LED_RED, LED_MODE_OFF, 0, 0, 0);                    // Red:     Off
+//                    led_set_state(qs_led_g, LED_GREEN, LED_MODE_FLASH, LED_RATE_SLOW, 0, 0);    // Green:   Slow Blinking
+//                    pwr_state = PWR_STATE_STANDBY;
+//                } else if (b_power_button) {
+					if (b_power_button) {
                     // User has pressed button to Power Down. Send message to Airoha, then small delay
                     // (to allow Airoha to play "Power Down" audio cue, before MCU puts most of the system in Sleep / Power Off)
                     power_state_delay_power_off();
@@ -529,15 +551,16 @@ void APP_PWR_Tasks ( void )
                 // The three quarters after (if headset still motionless and not on head) is three
                 // quarters of the programmed time, which will be low-power.
                 //if (wear_status == WEAR_SENSOR_NEAR) {
-                if ((wear_status == WEAR_SENSOR_NEAR) && (b_accel_active == true)) {
-                    // Headset just oput on head, so inform Airoha
-                    power_state_on();
-                    accel_sensitivity(ACCEL_HI_SENSE_THD, ACCEL_HI_SENSE_WIN);      // threshold = n/32g (0.125g), window = n (number of samples)
-                    // Update state
-                    led_set_state(qs_led_r, LED_RED, LED_MODE_OFF, 0, 0, 0);                    // Red:     Off
-                    led_set_state(qs_led_g, LED_GREEN, LED_MODE_ON, 0, 0, 0);                   // Green:   On
-                    pwr_state = PWR_STATE_ON;
-                } else if (b_power_button) {
+//                if ((wear_status == WEAR_SENSOR_NEAR) && (b_accel_active == true)) {
+//                    // Headset just oput on head, so inform Airoha
+//                    power_state_on();
+//                    accel_sensitivity(ACCEL_HI_SENSE_THD, ACCEL_HI_SENSE_WIN);      // threshold = n/32g (0.125g), window = n (number of samples)
+//                    // Update state
+//                    led_set_state(qs_led_r, LED_RED, LED_MODE_OFF, 0, 0, 0);                    // Red:     Off
+//                    led_set_state(qs_led_g, LED_GREEN, LED_MODE_ON, 0, 0, 0);                   // Green:   On
+//                    pwr_state = PWR_STATE_ON;
+//                } else if (b_power_button) {
+					if (b_power_button) {
                     // User has pressed button to Power Down. Send message to Airoha, then small delay
                     // (to allow Airoha to play "Power Down" audio cue, before MCU puts most of the system in Sleep / Power Off)
                     power_state_delay_power_off();
@@ -545,22 +568,23 @@ void APP_PWR_Tasks ( void )
                     led_set_state(qs_led_r, LED_RED, LED_MODE_FLASH, LED_RATE_FAST, 0, 0);      // Red:     Fast Blinking
                     led_set_state(qs_led_g, LED_GREEN, LED_MODE_OFF, 0, 0, 0);                  // Green:   Off
                     pwr_state = PWR_STATE_DELAY_POWER_OFF;
-                } else if (b_timeout) {
-                    if (b_standby_first_time) {
-                        b_standby_first_time = false;
-                        power_state_standby2();
-                        led_set_state(qs_led_r, LED_RED, LED_MODE_FLASH, LED_RATE_FAST, 0, 0);                    // Red:     Fast Blinking
-                        led_set_state(qs_led_g, LED_GREEN, LED_MODE_FLASH, LED_RATE_SLOW, 0, 0);    // Green:   Slow Blinking
-                    } else {
-                        // Inactivity timeout - so no accelerometer motion for a long time. Send message to Airoha, then small delay
-                        // (to allow Airoha to play "Power Down" audio cue, before MCU puts most of the system in Sleep / Power Off)
-                        power_state_delay_power_off();
-                        // Update state
-                        led_set_state(qs_led_r, LED_RED, LED_MODE_FLASH, LED_RATE_FAST, 0, 0);      // Red:     Fast Blinking
-                        led_set_state(qs_led_g, LED_GREEN, LED_MODE_OFF, 0, 0, 0);                  // Green:   Off
-                        pwr_state = PWR_STATE_DELAY_POWER_OFF;
-                    }
-                }
+				  }
+//                } else if (b_timeout) {
+//                    if (b_standby_first_time) {
+//                        b_standby_first_time = false;
+//                        power_state_standby2();
+//                        led_set_state(qs_led_r, LED_RED, LED_MODE_FLASH, LED_RATE_FAST, 0, 0);                    // Red:     Fast Blinking
+//                        led_set_state(qs_led_g, LED_GREEN, LED_MODE_FLASH, LED_RATE_SLOW, 0, 0);    // Green:   Slow Blinking
+//                    } else {
+//                        // Inactivity timeout - so no accelerometer motion for a long time. Send message to Airoha, then small delay
+//                        // (to allow Airoha to play "Power Down" audio cue, before MCU puts most of the system in Sleep / Power Off)
+//                        power_state_delay_power_off();
+//                        // Update state
+//                        led_set_state(qs_led_r, LED_RED, LED_MODE_FLASH, LED_RATE_FAST, 0, 0);      // Red:     Fast Blinking
+//                        led_set_state(qs_led_g, LED_GREEN, LED_MODE_OFF, 0, 0, 0);                  // Green:   Off
+//                        pwr_state = PWR_STATE_DELAY_POWER_OFF;
+//                    }
+//                }
                 break;
 
             case PWR_STATE_DELAY_POWER_OFF:
@@ -572,6 +596,7 @@ void APP_PWR_Tasks ( void )
                     power_state_off();
                     // Update state
                     pwr_state = PWR_STATE_OFF;
+					printf("PWR_STATE_DELAY_POWER_OFF \n");
                 }
                 break;
                 

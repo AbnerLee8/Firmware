@@ -60,14 +60,14 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
-/* Handle for the APP_MCU_Tasks. */
-TaskHandle_t xAPP_MCU_Tasks;
+/* Handle for the APP_ATMO_Tasks. */
+TaskHandle_t xAPP_ATMO_Tasks;
 
-static void lAPP_MCU_Tasks(  void *pvParameters  )
+static void lAPP_ATMO_Tasks(  void *pvParameters  )
 {   
     while(true)
     {
-        APP_MCU_Tasks();
+        APP_ATMO_Tasks();
         vTaskDelay(50U / portTICK_PERIOD_MS);
     }
 }
@@ -93,19 +93,6 @@ static void lAPP_MIC_Tasks(  void *pvParameters  )
         vTaskDelay(50U / portTICK_PERIOD_MS);
     }
 }
-/* Handle for the APP_GUI_Tasks. */
-
-TaskHandle_t xAPP_GUI_Tasks;
-
-static void lAPP_GUI_Tasks(  void *pvParameters  )
-{   
-    while(true)
-    {
-        APP_GUI_Tasks();
-        vTaskDelay(50U / portTICK_PERIOD_MS);
-    }
-}
-
 /* Handle for the APP_ENC_Tasks. */
 TaskHandle_t xAPP_ENC_Tasks;
 
@@ -136,17 +123,6 @@ static void lAPP_COM_Tasks(  void *pvParameters  )
     while(true)
     {
         APP_COM_Tasks();
-        vTaskDelay(50U / portTICK_PERIOD_MS);
-    }
-}
-/* Handle for the APP_DSP_Tasks. */
-TaskHandle_t xAPP_DSP_Tasks;
-
-static void lAPP_DSP_Tasks(  void *pvParameters  )
-{   
-    while(true)
-    {
-        APP_DSP_Tasks();
         vTaskDelay(50U / portTICK_PERIOD_MS);
     }
 }
@@ -234,13 +210,13 @@ void SYS_Tasks ( void )
     
 
     /* Maintain the application's state machine. */
-        /* Create OS Thread for APP_MCU_Tasks. */
-    (void) xTaskCreate((TaskFunction_t) lAPP_MCU_Tasks,
-                "APP_MCU_Tasks",
+        /* Create OS Thread for APP_ATMO_Tasks. */
+    (void) xTaskCreate((TaskFunction_t) lAPP_ATMO_Tasks,
+                "APP_ATMO_Tasks",
                 512,
                 NULL,
                 1,
-                &xAPP_MCU_Tasks);
+                &xAPP_ATMO_Tasks);
 
     /* Create OS Thread for APP_SNS_Tasks. */
     (void) xTaskCreate((TaskFunction_t) lAPP_SNS_Tasks,
@@ -257,15 +233,6 @@ void SYS_Tasks ( void )
                 NULL,
                 1,
                 &xAPP_MIC_Tasks);
-
-    /* Create OS Thread for APP_GUI_Tasks. */
-	
-    (void) xTaskCreate((TaskFunction_t) lAPP_GUI_Tasks,
-                "APP_GUI_Tasks",
-                512,
-                NULL,
-                1,
-                &xAPP_GUI_Tasks);
 
     /* Create OS Thread for APP_ENC_Tasks. */
     (void) xTaskCreate((TaskFunction_t) lAPP_ENC_Tasks,
@@ -291,14 +258,6 @@ void SYS_Tasks ( void )
                 1,
                 &xAPP_COM_Tasks);
 
-    /* Create OS Thread for APP_DSP_Tasks. */
-    (void) xTaskCreate((TaskFunction_t) lAPP_DSP_Tasks,
-                "APP_DSP_Tasks",
-                512,
-                NULL,
-                1,
-                &xAPP_DSP_Tasks);
-
     /* Create OS Thread for APP_MEM_Tasks. */
     (void) xTaskCreate((TaskFunction_t) lAPP_MEM_Tasks,
                 "APP_MEM_Tasks",
@@ -322,7 +281,6 @@ void SYS_Tasks ( void )
                 NULL,
                 1,
                 &xAPP_JSON_Tasks);
-
 
 
 

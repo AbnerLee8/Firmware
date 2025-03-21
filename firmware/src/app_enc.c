@@ -352,6 +352,7 @@ void led_mic_pwm(uint8_t pwm)
     }
 }
 
+
 // ******************************************************************************
 // LEDs (display brightness)
 // ******************************************************************************
@@ -359,46 +360,46 @@ void led_mic_pwm(uint8_t pwm)
 // .............................................................................
 // Initialise display brightness
 // .............................................................................
-void led_disp_init()
-{
-    LCD_LED_L_Clear();
-    osDelayMs(5);
-}
+//void led_disp_init()
+//{
+//    LCD_LED_L_Clear();
+//    osDelayMs(5);
+//}
 
 // .............................................................................
 // Set PWM value for LED brightness
 // .............................................................................
-void led_disp_stepdown()
-{
-    NVIC_INT_Disable();
-    LCD_LED_L_Clear();
-    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
-    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
-    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
-    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
-    LCD_LED_L_Set();
-    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
-    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
-    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
-    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
-    NVIC_INT_Enable();
-}
+//void led_disp_stepdown()
+//{
+//    NVIC_INT_Disable();
+//    LCD_LED_L_Clear();
+//    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
+//    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
+//    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
+//    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
+//    LCD_LED_L_Set();
+//    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
+//    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
+//    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
+//    __NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();__NOP();
+//    NVIC_INT_Enable();
+//}
 
 // .............................................................................
 // Set display background brightness
 // .............................................................................
-void led_disp_pwm(uint8_t pwm)
-{
-    led_disp_init();
-    if (pwm) {
-        if (pwm > 7) pwm = 7;
-        pwm = 17 - pwm;
-        while (pwm--) {
-            led_disp_stepdown();
-        }
-    }
-    osDelayMs(5);
-}
+//void led_disp_pwm(uint8_t pwm)
+//{
+//    led_disp_init();
+//    if (pwm) {
+//        if (pwm > 7) pwm = 7;
+//        pwm = 17 - pwm;
+//        while (pwm--) {
+//            led_disp_stepdown();
+//        }
+//    }
+//    osDelayMs(5);
+//}
 
 // ******************************************************************************
 // LEDs
@@ -845,6 +846,7 @@ void TimerCallback(TC_TIMER_STATUS status, uintptr_t context)
             // Time to actually power down now
             qs_but.event = POWER_TIMEOUT;                   // Time up, so power down now
             osQueueSendToBackFromISR(Q_pwr, &qs_but);
+		   
         }
     }
     
@@ -868,7 +870,7 @@ void enc_init()
     led_red_init();
     led_green_init();
     led_mic_init();
-    led_disp_init();
+//    led_atmo_init();
     led_mngr_init();
 
     // Configure: Left Encoder
@@ -937,14 +939,17 @@ void enc_init()
     EIC_InterruptEnable(EIC_PIN_2);
     EIC_InterruptEnable(EIC_PIN_3);
     // Start the timer
-    TC1_TimerStart();   
+    TC1_TimerStart();  
+
 }
+
 // .............................................................................
 // Task initializations.
 // This function runs BEFORE task is created and scheduler started.
 // .............................................................................
 void APP_ENC_Initialize ( void )
 {
+
 }
 
 // .............................................................................
@@ -1084,7 +1089,7 @@ void APP_ENC_Tasks ( void )
             // Process the received LED message
             if (qs_led.id == LED_BLUE) {
                 // Pass on to the RIght MCU
-                osQueueSendToBack(Q_mcu_led, &qs_led, 10);
+               osQueueSendToBack(Q_mcu_led, &qs_led, 10);
             } else {
                 // LED is on the Left Side
             led_mngr_new(qs_led);

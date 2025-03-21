@@ -57,17 +57,14 @@
 // Section: RTOS "Tasks" Handles
 // *****************************************************************************
 // *****************************************************************************
-/* Declaration of  APP_MCU_Tasks task handle */
-extern TaskHandle_t xAPP_MCU_Tasks;
+/* Declaration of  APP_ATMO_Tasks task handle */
+extern TaskHandle_t xAPP_ATMO_Tasks;
 
 /* Declaration of  APP_SNS_Tasks task handle */
 extern TaskHandle_t xAPP_SNS_Tasks;
 
 /* Declaration of  APP_MIC_Tasks task handle */
 extern TaskHandle_t xAPP_MIC_Tasks;
-
-/* Declaration of  APP_GUI_Tasks task handle */
-extern TaskHandle_t xAPP_GUI_Tasks;
 
 /* Declaration of  APP_ENC_Tasks task handle */
 extern TaskHandle_t xAPP_ENC_Tasks;
@@ -77,9 +74,6 @@ extern TaskHandle_t xAPP_PWR_Tasks;
 
 /* Declaration of  APP_COM_Tasks task handle */
 extern TaskHandle_t xAPP_COM_Tasks;
-
-/* Declaration of  APP_DSP_Tasks task handle */
-extern TaskHandle_t xAPP_DSP_Tasks;
 
 /* Declaration of  APP_MEM_Tasks task handle */
 extern TaskHandle_t xAPP_MEM_Tasks;

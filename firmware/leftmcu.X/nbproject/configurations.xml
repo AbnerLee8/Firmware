@@ -66,10 +66,13 @@
                 <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom4_i2c_master.h</itemPath>
                 <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom5_i2c_master.h</itemPath>
               </logicalFolder>
+              <logicalFolder name="spi_master" displayName="spi_master" projectFiles="true">
+                <itemPath>../src/config/default/peripheral/sercom/spi_master/plib_sercom6_spi_master.h</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h</itemPath>
+              </logicalFolder>
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom1_usart.h</itemPath>
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
-                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom6_usart.h</itemPath>
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom0_usart.h</itemPath>
               </logicalFolder>
             </logicalFolder>
@@ -296,10 +299,7 @@
       <itemPath>../src/app_mic.h</itemPath>
       <itemPath>../src/app_mem.h</itemPath>
       <itemPath>../src/app_com.h</itemPath>
-      <itemPath>../src/app_mcu.h</itemPath>
       <itemPath>../src/app_enc.h</itemPath>
-      <itemPath>../src/app_dsp.h</itemPath>
-      <itemPath>../src/app.h</itemPath>
       <itemPath>../src/fifo.h</itemPath>
       <itemPath>../src/but_mgr.h</itemPath>
       <itemPath>../src/hw_hx32062se.h</itemPath>
@@ -316,9 +316,9 @@
       <itemPath>../src/utils.h</itemPath>
       <itemPath>../src/large_files.h</itemPath>
       <itemPath>../src/json/json_build.h</itemPath>
-      <itemPath>../src/json/json_eq_presets.h</itemPath>
       <itemPath>../src/json/json_profiles.h</itemPath>
-      <itemPath>../src/app_gui.h</itemPath>
+      <itemPath>../src/app_atmo.h</itemPath>
+      <itemPath>../src/app.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -394,9 +394,11 @@
                 <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom4_i2c_master.c</itemPath>
                 <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom5_i2c_master.c</itemPath>
               </logicalFolder>
+              <logicalFolder name="spi_master" displayName="spi_master" projectFiles="true">
+                <itemPath>../src/config/default/peripheral/sercom/spi_master/plib_sercom6_spi_master.c</itemPath>
+              </logicalFolder>
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom1_usart.c</itemPath>
-                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom6_usart.c</itemPath>
                 <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom0_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
@@ -478,9 +480,6 @@
       <itemPath>../src/app_enc.c</itemPath>
       <itemPath>../src/app_com.c</itemPath>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
-      <itemPath>../src/app_mcu.c</itemPath>
-      <itemPath>../src/app_dsp.c</itemPath>
-      <itemPath>../src/app.c</itemPath>
       <itemPath>../src/fifo.c</itemPath>
       <itemPath>../src/but_mgr.c</itemPath>
       <itemPath>../src/hw_hx32062se.c</itemPath>
@@ -496,9 +495,9 @@
       <itemPath>../src/utils.c</itemPath>
       <itemPath>../src/large_files.c</itemPath>
       <itemPath>../src/json/json_build.c</itemPath>
-      <itemPath>../src/json/json_eq_presets.c</itemPath>
       <itemPath>../src/json/json_profiles.c</itemPath>
-      <itemPath>../src/app_gui.c</itemPath>
+      <itemPath>../src/app_atmo.c</itemPath>
+      <itemPath>../src/app.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -518,8 +517,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
-        <pack name="SAMD51_DFP" vendor="Microchip" version="3.7.237"/>
+        <pack name="SAMD51_DFP" vendor="Microchip" version="3.8.246"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -548,38 +546,6 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item path="../src/app_gui.c" ex="false" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
-      </item>
-      <item path="../src/app_gui.h" ex="false" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
-      </item>
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
@@ -667,7 +633,8 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=""/>
+        <property key="preprocessor-macros"
+                  value="ROM_LENGTH=0xf4000;ROM_ORIGIN=0xc000"/>
         <property key="remove-unused-sections" value="false"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -759,7 +726,7 @@
         <property key="memories.programmemory.ranges" value="0-fffff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="E:/Projects/Envelopers/GLO/leftmcu1/firmware/leftmcu.X/debug/default/leftmcu_ptg"/>
+                  value="D:/work/Firmware/firmware/leftmcu.X/debug/default/leftmcu_ptg"/>
         <property key="programmerToGoImageName" value="leftmcu_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

@@ -48,8 +48,8 @@ void APP_JSON_Tasks ( void )
     while (Q_enc == NULL) osDelayMs(10);
     while (Q_bm_but == NULL) osDelayMs(10);         // button manager - button events
     while (Q_bm_comm == NULL) osDelayMs(10);        // button manager - from comms
-    while (Q_enc_mcu == NULL) osDelayMs(10);
-    while (Q_mcu_init == NULL) osDelayMs(10);
+   while (Q_enc_mcu == NULL) osDelayMs(10);
+   while (Q_mcu_init == NULL) osDelayMs(10);
     while (Q_led == NULL) osDelayMs(10);
     // Read serial number just once
     mcu_ser_num_read();

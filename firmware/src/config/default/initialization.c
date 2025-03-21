@@ -236,6 +236,7 @@ static const SYS_TIME_INIT sysTimeInitData =
 // *****************************************************************************
 // *****************************************************************************
 
+
 /* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
@@ -256,9 +257,10 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize( );
 
+
   
     PORT_Initialize();
-
+    
     CLOCK_Initialize();
 
 
@@ -270,9 +272,9 @@ void SYS_Initialize ( void* data )
 
     TC2_TimerInitialize();
 
-    PDEC_QDECInitialize();
-
     TC4_CompareInitialize();
+
+    PDEC_QDECInitialize();
 
     TC7_CompareInitialize();
 
@@ -284,15 +286,14 @@ void SYS_Initialize ( void* data )
 
     SERCOM0_USART_Initialize();
 
-    /*SERCOM5_USART_Initialize();*///USE to Right Logic IC/fuel guage IC /Charge IC I2C bus
-	SERCOM5_I2C_Initialize();
+    SERCOM6_SPI_Initialize();
+
+    SERCOM5_I2C_Initialize();
 
     PM_Initialize();
 
     SERCOM4_I2C_Initialize();
 	
-	SERCOM6_USART_Initialize();
-
     EIC_Initialize();
 
     QSPI_Initialize();
@@ -322,14 +323,12 @@ void SYS_Initialize ( void* data )
 
 
     /* MISRAC 2012 deviation block end */
-    APP_MCU_Initialize();
+    APP_ATMO_Initialize();
     APP_SNS_Initialize();
     APP_MIC_Initialize();
-    APP_GUI_Initialize();
     APP_ENC_Initialize();
     APP_PWR_Initialize();
     APP_COM_Initialize();
-    APP_DSP_Initialize();
     APP_MEM_Initialize();
     BUT_MGR_Initialize();
 

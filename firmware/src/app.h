@@ -180,23 +180,23 @@ void led_set_state(Q_led_t qs_led, uint8_t id, uint8_t mode, uint8_t rate, uint8
 // .............................................................................
 // ANC Modes
 // .............................................................................
-#define DSP_ANC_MODE_UNDEFINED          0
-#define DSP_ANC_MODE_NOISE_CANCELATION  1
-#define DSP_ANC_MODE_TRANSPARENT        2
-#define DSP_ANC_MODE_NORMAL             3
-
-
-#define DMICS_ALL_OFF                   0
-#define DMIC0_ON                        1
-#define DMIC1_ON                        2
-#define DMIC2_ON                        3
-#define DMIC3_ON                        4
-#define DMIC4_ON                        5
-#define DMIC5_ON                        6
-#define DMICS_ALL_ON                    7
-
-
-extern void dsp_anc_mode_cycle();
+//#define DSP_ANC_MODE_UNDEFINED          0
+//#define DSP_ANC_MODE_NOISE_CANCELATION  1
+//#define DSP_ANC_MODE_TRANSPARENT        2
+//#define DSP_ANC_MODE_NORMAL             3
+//
+//
+//#define DMICS_ALL_OFF                   0
+//#define DMIC0_ON                        1
+//#define DMIC1_ON                        2
+//#define DMIC2_ON                        3
+//#define DMIC3_ON                        4
+//#define DMIC4_ON                        5
+//#define DMIC5_ON                        6
+//#define DMICS_ALL_ON                    7
+//
+//
+//extern void dsp_anc_mode_cycle();
 
 // .............................................................................
 // Microphones
@@ -235,26 +235,26 @@ extern void dsp_eq_presets_update();
 // .............................................................................
 enum {
     RIGHT_MFB_1CLICK = 1,
-    RIGHT_MFB_2CLICK,
-    RIGHT_MFB_3CLICK,
-    RIGHT_MFB_LONGPRESS,
-    RIGHT_ENC_1CLICK,
-    RIGHT_ENC_2CLICK,
-    RIGHT_ENC_3CLICK,
-    RIGHT_ENC_LONGPRESS,
-    RIGHT_ENCODER,
-    RIGHT_ENCODER_STOP,
-    LEFT_MFB_1CLICK,
-    LEFT_MFB_2CLICK,
-    LEFT_MFB_3CLICK,
-    LEFT_MFB_LONGPRESS,
-    LEFT_ENC_1CLICK,
-    LEFT_ENC_2CLICK,
-    LEFT_ENC_3CLICK,
-    LEFT_ENC_LONGPRESS,
-    LEFT_ENCODER,
-    LEFT_ENCODER_STOP,
-    LEFT_RIGHT_ENC_1CLICK,
+    RIGHT_MFB_2CLICK = 2 ,
+    RIGHT_MFB_3CLICK = 3,
+    RIGHT_MFB_LONGPRESS = 4,
+    RIGHT_ENC_1CLICK = 5,
+    RIGHT_ENC_2CLICK = 6,
+    RIGHT_ENC_3CLICK = 7,
+    RIGHT_ENC_LONGPRESS = 8,
+    RIGHT_ENCODER = 9,
+    RIGHT_ENCODER_STOP = 10,
+    LEFT_MFB_1CLICK = 11,
+    LEFT_MFB_2CLICK = 12,
+    LEFT_MFB_3CLICK = 13,
+    LEFT_MFB_LONGPRESS = 14,
+    LEFT_ENC_1CLICK = 15,
+    LEFT_ENC_2CLICK = 16,
+    LEFT_ENC_3CLICK = 17,
+    LEFT_ENC_LONGPRESS = 18,
+    LEFT_ENCODER = 19,
+    LEFT_ENCODER_STOP = 20,
+    LEFT_RIGHT_ENC_1CLICK = 21,
 };
 // .............................................................................
 // Microphone
@@ -266,7 +266,7 @@ enum {
 // The queues
 // .............................................................................
 extern QueueHandle_t Q_pwr;
-extern QueueHandle_t Q_pwr_sns;
+//extern QueueHandle_t Q_pwr_sns;
 extern QueueHandle_t Q_enc;
 extern QueueHandle_t Q_enc_mcu;
 extern QueueHandle_t Q_led;
@@ -284,7 +284,7 @@ extern QueueHandle_t Q_mic;
 extern void led_red_pwm(uint8_t pwm);
 extern void led_green_pwm(uint8_t pwm);
 extern void led_mic_pwm(uint8_t pwm);
-extern void led_disp_pwm(uint8_t pwm);
+extern void led_atmo_pwm(uint8_t pwm);
 
 // .............................................................................
 // Button Manager

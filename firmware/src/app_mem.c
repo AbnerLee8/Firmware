@@ -444,7 +444,7 @@ void APP_MEM_Tasks ( void )
     SYS_FS_CurrentDriveSet("/mnt/mem1");
     
     DBGprintf("current drive set = %d\n", SYS_FS_Error());
-    DBGprintf("current file: %s\n", fileName1);
+   // DBGprintf("current file: %s\n", fileName1);
 
 
     /*

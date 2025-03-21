@@ -339,6 +339,9 @@ void json_fn_i_audio_vol(int pos)
     // Action: Send message to Airoha chip
     json_fn_a_audio_vol(pos);
 }
+
+
+
 // .............................................................................
 
 // %%%%%%%%%%%%%%%%%%%%%%
@@ -1009,7 +1012,7 @@ int json_fn_w_eq_preset_X(uint8_t p_indx, data_eq_pre_t *eq_data)
                 }            
             } else {
                 // Need to assign first available EQ Preset to this Profile
-                err = json_eq_presets_first_defined(&eq_new);
+//                err = json_eq_presets_first_defined(&eq_new);
                 if (err < 0) {
                     return -4;
                 }
@@ -1736,7 +1739,7 @@ int json_fn_a_disp_bright(uint8_t u8_val)
 {
     u8_val = u8_val / 12;
     u8_val &= 0x07;
-    led_disp_pwm(u8_val);                   // local left backlight
+//    led_disp_pwm(u8_val);                   // local left backlight
     printf("[led disp %d]\n", u8_val);      // remote right backlight
     
     return 0;
@@ -1803,24 +1806,26 @@ int json_fn_r_disp_bright(uint8_t p_indx, char *val_str)
 void json_fn_a_chat_mix(int i_val)
 {
     Q_comm_simp_t qs_comm_simp_msg;
+	printf(" A  \n");
 
     // Inform the Airoha chip
     // Send message to COMMS task
     qs_comm_simp_msg.id = COMMS_CHAT_MIX;
     qs_comm_simp_msg.i_val = i_val;
     osQueueSendToBack(Q_comm_simp, &qs_comm_simp_msg, 10);
+	//printf("simp message id:0x%02x, val:%d \n ",qs_comm_simp_msg.id,qs_comm_simp_msg.i_val);
 }
 void json_fn_n_chat_mix(uint8_t u8_val)
 {
     int err;
     char val_str[JSON_DATA_VAL_STR_MAX_LEN];
-    
+    printf(" N  \n");
     // Convert position value to string
     err = utils_uint8_to_str(val_str, u8_val); 
     if (err < 0) {
         return;
     }
-
+   //printf("val_str %s\n",val_str);
     err = json_add_i_key_val(json_key_Chat_Mix, strlen(json_key_Chat_Mix), val_str, strlen(val_str));    
 }
 // .............................................................................
@@ -3190,7 +3195,7 @@ int json_fn_w_eq_preset_en(uint8_t p_indx, char *val_str)
             } else {
                 // The specified EQ Preset is NOT defined
                 // FInd the first available:
-                err = json_eq_presets_first_defined(&eq_id);
+ //               err = json_eq_presets_first_defined(&eq_id);
                 if (err < 0) {
                     // No EQ Preset defined!
                     return -3;
