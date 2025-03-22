@@ -14,8 +14,6 @@
 #include "app_sns.h"
 #include "hw_hx32062se.h"
 #include "hw_qmi8658a.h"
-#include "max77985.h"
-#include "cw221x.h"
 // ...........................................
 // Charger
 // ...........................................
@@ -400,12 +398,7 @@ void APP_SNS_Tasks ( void )
             
     // Accelerometer
     accel_init();
-    //init cw221x(batt)
-    batt_cw221x_init();
 
-    //init charger
-    charger_init();
-    osDelayMs(20);
     // Always save last movement counter, so can tell if any movement since last check
     INT_G_cnt_previous = INT_G_cnt;
     

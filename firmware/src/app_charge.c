@@ -28,7 +28,8 @@
 // *****************************************************************************
 
 #include "app_charge.h"
-
+#include "max77985.h"
+#include "cw221x.h"
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
@@ -50,7 +51,7 @@
     Application strings and buffers are be defined outside this structure.
 */
 
-APP_CHARGE_DATA app_chargeData;
+//APP_CHARGE_DATA app_chargeData;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -88,14 +89,7 @@ APP_CHARGE_DATA app_chargeData;
 
 void APP_CHARGE_Initialize ( void )
 {
-    /* Place the App state machine in its initial state. */
-    app_chargeData.state = APP_CHARGE_STATE_INIT;
 
-
-
-    /* TODO: Initialize your application's state machine and other
-     * parameters.
-     */
 }
 
 
@@ -110,38 +104,19 @@ void APP_CHARGE_Initialize ( void )
 void APP_CHARGE_Tasks ( void )
 {
 
-    /* Check the application's current state. */
-    switch ( app_chargeData.state )
+    // Task waits Power Task has powered everything up
+    while (!GlobalPowerOn) {
+        osDelayMs(100);
+    }
+    //init cw221x(batt)
+    batt_cw221x_init();
+
+    //init charger
+    charger_init();
+    osDelayMs(20);
+    while(1) 
     {
-        /* Application's initial state. */
-        case APP_CHARGE_STATE_INIT:
-        {
-            bool appInitialized = true;
-
-
-            if (appInitialized)
-            {
-
-                app_chargeData.state = APP_CHARGE_STATE_SERVICE_TASKS;
-            }
-            break;
-        }
-
-        case APP_CHARGE_STATE_SERVICE_TASKS:
-        {
-
-            break;
-        }
-
-        /* TODO: implement your application state machine.*/
-
-
-        /* The default state should never be executed. */
-        default:
-        {
-            /* TODO: Handle error in application's state machine. */
-            break;
-        }
+      OS_SLEEP(10); //osDelayMs(10);
     }
 }
 
