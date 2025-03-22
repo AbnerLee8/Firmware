@@ -63,7 +63,7 @@ volatile static uint16_t nvm_error;
 
 void NVMCTRL_Initialize(void)
 {
-   NVMCTRL_REGS->NVMCTRL_CTRLA = (uint16_t)NVMCTRL_CTRLA_RWS(1U) | NVMCTRL_CTRLA_AUTOWS_Msk;
+   NVMCTRL_REGS->NVMCTRL_CTRLA = (uint16_t)NVMCTRL_CTRLA_RWS(2U) | NVMCTRL_CTRLA_AUTOWS_Msk;
 }
 
 bool NVMCTRL_Read( uint32_t *data, uint32_t length, const uint32_t address )

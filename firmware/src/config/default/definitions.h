@@ -114,7 +114,7 @@ extern "C" {
 #define DEVICE_SERIES		 "SAMD51"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 48000000
+#define CPU_CLOCK_FREQUENCY 60000000
 
 // *****************************************************************************
 // *****************************************************************************
