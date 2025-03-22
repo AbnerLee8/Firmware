@@ -230,3 +230,21 @@ int batt_cw221x_voltage(void)
     V /= 10000; // mV
     return V;
 }
+
+// ............................................................................
+// Read the battery SOC (state of charge))
+// return the SOC in 1%
+// return -1 if i2c error
+// ............................................................................
+int batt_cw221x_soc(void)
+{
+    uint8_t wrbuf[2], rdbuf[2];
+    int soc;
+    wrbuf[0] = 0x04; // read the battery SOC (only the 1% register)
+    if (i2c_cw221x_writeread(wrbuf,1, rdbuf,2)) {
+        return -1;
+    }
+
+    soc = rdbuf[0]*256 + rdbuf[1];
+    return soc;
+}

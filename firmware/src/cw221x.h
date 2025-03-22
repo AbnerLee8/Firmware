@@ -64,6 +64,7 @@ int batt_cw221x_sleep(void);
 int batt_cw221x_temperature(void);
 int batt_cw221x_soh_health(void);
 int batt_cw221x_voltage(void);
+int batt_cw221x_soc(void);
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
 }
