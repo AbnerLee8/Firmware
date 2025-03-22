@@ -156,7 +156,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;FreeRTOS&gt;
   &lt;FreeRTOS dnOrder=&quot;0&quot; id=&quot;FREERTOS_CPU_CLOCK_HZ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;FreeRTOS&quot; value=&quot;120000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;FreeRTOS&quot; value=&quot;48000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/FreeRTOS&gt;
 &lt;/FreeRTOS&gt;
@@ -4161,7 +4161,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_CLOCK_DPLL0_LDR_INTEGER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;119&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;149&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;119&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4172,7 +4172,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_CLOCK_DPLL0_MULTIPLIER_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;150.0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;120.0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4228,7 +4228,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;CPU_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;120000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;48000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4250,7 +4250,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;DPLL0_CLOCK_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;120000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;96000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4272,7 +4272,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;EIC_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4503,7 +4503,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_0_DIV&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4514,7 +4514,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_0_DIVIDER_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;2&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4525,7 +4525,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_0_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;120000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;48000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4537,7 +4537,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_1_DIV&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;2&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;2&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;4&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4548,7 +4548,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_1_DIVIDER_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;2&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;4&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4559,7 +4559,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_1_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4604,7 +4604,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_1_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4628,6 +4628,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_24_CHEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4638,7 +4639,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_24_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4672,6 +4673,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_26_CHEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4682,7 +4684,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_26_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4694,6 +4696,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_30_CHEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4704,7 +4707,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_30_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4726,7 +4729,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_31_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4738,6 +4741,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_34_CHEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4748,7 +4752,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_34_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4760,6 +4764,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_35_CHEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4770,7 +4775,18 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_35_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="GCLK_ID_35_GENSEL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_35_GENSEL&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4782,6 +4798,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_36_CHEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4792,7 +4809,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_36_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4837,6 +4854,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_39_CHEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4847,7 +4865,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_39_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4869,7 +4887,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_4_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4881,6 +4899,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_7_CHEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4891,7 +4910,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_7_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4903,6 +4922,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_8_CHEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4913,7 +4933,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_8_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4925,6 +4945,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_9_CHEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4935,7 +4956,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_9_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4958,7 +4979,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;MAIN_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;120000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;48000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -6707,7 +6728,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PDEC_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15623,7 +15644,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;QSPI_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;120000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;48000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -15821,7 +15842,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_CORE_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -16019,7 +16040,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM1_CORE_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -16217,7 +16238,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM3_CORE_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -16415,7 +16436,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM4_CORE_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -16613,7 +16634,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM5_CORE_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -16811,7 +16832,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM6_CORE_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -17082,7 +17103,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SYSTICK_PERIOD&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x1D4C0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0xBB80&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -17094,7 +17115,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;SYSTICK_PERIOD_MS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Float dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;139.81012&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;349.5253&lt;/Value&gt;
       &lt;/Float&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;/&gt;
@@ -17173,7 +17194,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC0_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -17239,7 +17260,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC1_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -17305,7 +17326,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC2_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -17371,7 +17392,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC3_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -17393,7 +17414,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC4_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -17459,7 +17480,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC7_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -20377,7 +20398,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvmctrl&gt;
   &lt;nvmctrl dnOrder=&quot;0&quot; id=&quot;NVM_RWS&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;nvmctrl&quot; value=&quot;5&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;nvmctrl&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/nvmctrl&gt;
 &lt;/nvmctrl&gt;
@@ -20789,7 +20810,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;pdec&gt;
   &lt;pdec dnOrder=&quot;0&quot; id=&quot;PDEC_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;pdec&quot; value=&quot;3750000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;pdec&quot; value=&quot;1500000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/pdec&gt;
 &lt;/pdec&gt;
@@ -21073,14 +21094,14 @@
   &lt;qspi dnOrder=&quot;0&quot; id=&quot;QSPI_BAUD_RATE&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Integer dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;66000000&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;48000000&lt;/Value&gt;
       &lt;/Integer&gt;
       &lt;Integer dnOrder=&quot;1&quot; id=&quot;min&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;468750&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;187500&lt;/Value&gt;
       &lt;/Integer&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;qspi&quot; value=&quot;66000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;qspi&quot; value=&quot;48000000&quot;/&gt;
       &lt;User dnOrder=&quot;1&quot; value=&quot;12000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/qspi&gt;
@@ -21148,7 +21169,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;qspi&gt;
   &lt;qspi dnOrder=&quot;0&quot; id=&quot;QSPI_SCBR&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;qspi&quot; value=&quot;9&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;qspi&quot; value=&quot;3&quot;/&gt;
     &lt;/Values&gt;
   &lt;/qspi&gt;
 &lt;/qspi&gt;
@@ -21375,7 +21396,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CM_BAUD&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;255&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;114&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
@@ -21504,7 +21525,7 @@
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_NS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Integer dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;2050&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;5125&lt;/Value&gt;
       &lt;/Integer&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;/&gt;
@@ -21517,7 +21538,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
@@ -21902,7 +21923,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;29&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;11&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
@@ -22104,7 +22125,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
   &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_BAUD_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;63522&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;60502&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
@@ -22542,7 +22563,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom1&gt;
   &lt;sercom1 dnOrder=&quot;0&quot; id=&quot;I2CM_BAUD&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom1&quot; value=&quot;255&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom1&quot; value=&quot;114&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom1&gt;
 &lt;/sercom1&gt;
@@ -22671,7 +22692,7 @@
   &lt;sercom1 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_NS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Integer dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;2050&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;5125&lt;/Value&gt;
       &lt;/Integer&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;/&gt;
@@ -22684,7 +22705,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom1&gt;
   &lt;sercom1 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom1&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom1&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom1&gt;
 &lt;/sercom1&gt;
@@ -23075,7 +23096,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom1&gt;
   &lt;sercom1 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom1&quot; value=&quot;29&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom1&quot; value=&quot;11&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom1&gt;
 &lt;/sercom1&gt;
@@ -23279,7 +23300,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom1&gt;
   &lt;sercom1 dnOrder=&quot;0&quot; id=&quot;USART_BAUD_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom1&quot; value=&quot;63522&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom1&quot; value=&quot;60502&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom1&gt;
 &lt;/sercom1&gt;
@@ -23700,7 +23721,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom3&gt;
   &lt;sercom3 dnOrder=&quot;0&quot; id=&quot;I2CM_BAUD&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom3&quot; value=&quot;255&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom3&quot; value=&quot;114&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom3&gt;
 &lt;/sercom3&gt;
@@ -23829,7 +23850,7 @@
   &lt;sercom3 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_NS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Integer dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;2050&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;5125&lt;/Value&gt;
       &lt;/Integer&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;/&gt;
@@ -23842,7 +23863,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom3&gt;
   &lt;sercom3 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom3&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom3&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom3&gt;
 &lt;/sercom3&gt;
@@ -24261,7 +24282,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom3&gt;
   &lt;sercom3 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom3&quot; value=&quot;29&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom3&quot; value=&quot;11&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom3&gt;
 &lt;/sercom3&gt;
@@ -24463,7 +24484,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom3&gt;
   &lt;sercom3 dnOrder=&quot;0&quot; id=&quot;USART_BAUD_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom3&quot; value=&quot;63522&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom3&quot; value=&quot;60502&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom3&gt;
 &lt;/sercom3&gt;
@@ -24862,7 +24883,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom4&gt;
   &lt;sercom4 dnOrder=&quot;0&quot; id=&quot;I2CM_BAUD&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom4&quot; value=&quot;255&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom4&quot; value=&quot;114&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom4&gt;
 &lt;/sercom4&gt;
@@ -24991,7 +25012,7 @@
   &lt;sercom4 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_NS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Integer dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;2050&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;5125&lt;/Value&gt;
       &lt;/Integer&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;/&gt;
@@ -25004,7 +25025,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom4&gt;
   &lt;sercom4 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom4&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom4&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom4&gt;
 &lt;/sercom4&gt;
@@ -25423,7 +25444,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom4&gt;
   &lt;sercom4 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom4&quot; value=&quot;29&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom4&quot; value=&quot;11&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom4&gt;
 &lt;/sercom4&gt;
@@ -25625,7 +25646,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom4&gt;
   &lt;sercom4 dnOrder=&quot;0&quot; id=&quot;USART_BAUD_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom4&quot; value=&quot;63522&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom4&quot; value=&quot;60502&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom4&gt;
 &lt;/sercom4&gt;
@@ -26024,7 +26045,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom5&gt;
   &lt;sercom5 dnOrder=&quot;0&quot; id=&quot;I2CM_BAUD&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom5&quot; value=&quot;255&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom5&quot; value=&quot;114&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom5&gt;
 &lt;/sercom5&gt;
@@ -26153,7 +26174,7 @@
   &lt;sercom5 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_NS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Integer dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;2050&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;5125&lt;/Value&gt;
       &lt;/Integer&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;/&gt;
@@ -26166,7 +26187,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom5&gt;
   &lt;sercom5 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom5&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom5&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom5&gt;
 &lt;/sercom5&gt;
@@ -26585,7 +26606,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom5&gt;
   &lt;sercom5 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom5&quot; value=&quot;29&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom5&quot; value=&quot;11&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom5&gt;
 &lt;/sercom5&gt;
@@ -26787,7 +26808,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom5&gt;
   &lt;sercom5 dnOrder=&quot;0&quot; id=&quot;USART_BAUD_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom5&quot; value=&quot;63522&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom5&quot; value=&quot;60502&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom5&gt;
 &lt;/sercom5&gt;
@@ -27188,7 +27209,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom6&gt;
   &lt;sercom6 dnOrder=&quot;0&quot; id=&quot;I2CM_BAUD&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom6&quot; value=&quot;255&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom6&quot; value=&quot;114&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom6&gt;
 &lt;/sercom6&gt;
@@ -27317,7 +27338,7 @@
   &lt;sercom6 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_NS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Integer dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;2050&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;5125&lt;/Value&gt;
       &lt;/Integer&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;/&gt;
@@ -27330,7 +27351,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom6&gt;
   &lt;sercom6 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom6&quot; value=&quot;1&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom6&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom6&gt;
 &lt;/sercom6&gt;
@@ -27823,7 +27844,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom6&gt;
   &lt;sercom6 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_REG_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom6&quot; value=&quot;8&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom6&quot; value=&quot;2&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom6&gt;
 &lt;/sercom6&gt;
@@ -28095,7 +28116,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom6&gt;
   &lt;sercom6 dnOrder=&quot;0&quot; id=&quot;USART_BAUD_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom6&quot; value=&quot;63522&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom6&quot; value=&quot;60502&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sercom6&gt;
 &lt;/sercom6&gt;
@@ -29836,7 +29857,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_time&gt;
   &lt;sys_time dnOrder=&quot;0&quot; id=&quot;SYS_TIME_ACHIEVABLE_TICK_RATE_HZ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_time&quot; value=&quot;100001666&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_time&quot; value=&quot;100004166&quot;/&gt;
     &lt;/Values&gt;
   &lt;/sys_time&gt;
 &lt;/sys_time&gt;
@@ -30464,7 +30485,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc0&gt;
   &lt;tc0 dnOrder=&quot;0&quot; id=&quot;TC_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;7500000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;3000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc0&gt;
 &lt;/tc0&gt;
@@ -30594,7 +30615,7 @@
       &lt;/Long&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;255&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;254&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc0&gt;
 &lt;/tc0&gt;
@@ -30619,7 +30640,7 @@
   &lt;tc0 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_TIME_MS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Float dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;0.034133334&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;0.08533333&lt;/Value&gt;
       &lt;/Float&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;/&gt;
@@ -31139,7 +31160,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc1&gt;
   &lt;tc1 dnOrder=&quot;0&quot; id=&quot;TC_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc1&quot; value=&quot;15000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc1&quot; value=&quot;6000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc1&gt;
 &lt;/tc1&gt;
@@ -31269,7 +31290,7 @@
       &lt;/Long&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc1&quot; value=&quot;65535&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc1&quot; value=&quot;59999&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc1&gt;
 &lt;/tc1&gt;
@@ -31294,7 +31315,7 @@
   &lt;tc1 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_TIME_MS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Float dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;4.3690667&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;10.922667&lt;/Value&gt;
       &lt;/Float&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
@@ -31803,7 +31824,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc2&gt;
   &lt;tc2 dnOrder=&quot;0&quot; id=&quot;TC_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc2&quot; value=&quot;60000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc2&quot; value=&quot;24000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc2&gt;
 &lt;/tc2&gt;
@@ -31938,7 +31959,7 @@
       &lt;/Long&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc2&quot; value=&quot;59999&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc2&quot; value=&quot;23999&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc2&gt;
 &lt;/tc2&gt;
@@ -31950,7 +31971,7 @@
   &lt;tc2 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_TIME_MS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Float dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;71582.79&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;178956.97&lt;/Value&gt;
       &lt;/Float&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
@@ -32505,7 +32526,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc4&gt;
   &lt;tc4 dnOrder=&quot;0&quot; id=&quot;TC_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc4&quot; value=&quot;7500000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc4&quot; value=&quot;3000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc4&gt;
 &lt;/tc4&gt;
@@ -32635,7 +32656,7 @@
       &lt;/Long&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc4&quot; value=&quot;255&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc4&quot; value=&quot;254&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc4&gt;
 &lt;/tc4&gt;
@@ -32660,7 +32681,7 @@
   &lt;tc4 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_TIME_MS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Float dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;0.034133334&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;0.08533333&lt;/Value&gt;
       &lt;/Float&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;/&gt;
@@ -33213,7 +33234,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc7&gt;
   &lt;tc7 dnOrder=&quot;0&quot; id=&quot;TC_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc7&quot; value=&quot;7500000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc7&quot; value=&quot;3000000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc7&gt;
 &lt;/tc7&gt;
@@ -33343,7 +33364,7 @@
       &lt;/Long&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc7&quot; value=&quot;255&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc7&quot; value=&quot;254&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc7&gt;
 &lt;/tc7&gt;
@@ -33368,7 +33389,7 @@
   &lt;tc7 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_TIME_MS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Float dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;0.034133334&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;0.08533333&lt;/Value&gt;
       &lt;/Float&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;/&gt;
@@ -33513,15 +33534,15 @@
       </entry>
       <entry>
          <file>..\src\config\default\FreeRTOSConfig.h</file>
-         <hash>1ca74d483514791f50ee44fa5ef711db72a5a5e8eb9c22c7f173da1e70be3fea</hash>
+         <hash>462fa4c961cfda47fa40c78cd32136cb7d4405cc7f720262f300b0471cc56f95</hash>
       </entry>
       <entry>
          <file>..\src\config\default\configuration.h</file>
-         <hash>671d7c7cacddc1bcb476b702f58cdf9032c303caad8e2603d6f991ae1327548b</hash>
+         <hash>c29a83b0e149a2c5d5cc02f9c6e240677f4fcd02e9a3752db1237eeca891fe3b</hash>
       </entry>
       <entry>
          <file>..\src\config\default\definitions.h</file>
-         <hash>159b3bd5dcb535f21e57e11ac9dd288a9600ca92875e9b159a5b559fb233aa58</hash>
+         <hash>d342e8b744a3f104c28598c89e786fc8667916aefc16aaa5fe39e3364b945071</hash>
       </entry>
       <entry>
          <file>..\src\config\default\device.h</file>
@@ -33593,7 +33614,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\initialization.c</file>
-         <hash>1ebc229db4f228f94f831eb300f2873eb5773ce96be389d64fec571cdfcbfbfa</hash>
+         <hash>574048917c8215a5a7a76d9846367e3925f094c29eb7177d3370c17b7fab9d71</hash>
       </entry>
       <entry>
          <file>..\src\config\default\interrupts.c</file>
@@ -33625,7 +33646,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\clock\plib_clock.c</file>
-         <hash>b927ba485101c7216ecb3af259e4c61bef4d4b0f690e8ee6b1ac974a65a1ce8c</hash>
+         <hash>b20473072856747c17f815c3e66fe6da7af6e9e5107fef8641da1afdcd59c776</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\clock\plib_clock.h</file>
@@ -33665,7 +33686,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\nvmctrl\plib_nvmctrl.c</file>
-         <hash>1a6bdac00590cbec796a13351597c695bc1d962a95641bdb573d1bf0dc38b2d8</hash>
+         <hash>7b4dab7fd663b9f2bc4dc5ee90662544eab1db7e5b49064b93caca0a3a834e61</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\nvmctrl\plib_nvmctrl.h</file>
@@ -33701,7 +33722,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\qspi\plib_qspi.c</file>
-         <hash>39a8c7a76179c3d4433c71c333acac3d06450a69b1e805e4048654bf1cb71bba</hash>
+         <hash>f69ac43c8627809fe6af85e3a647d121118056eac8db405f38f0d827a1f53b8d</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\qspi\plib_qspi.h</file>
@@ -33713,7 +33734,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\i2c_master\plib_sercom3_i2c_master.c</file>
-         <hash>73c8e9d76e14c6cdc6f89e2146396239e541a3ce1c45b34e4a89d4d2c52aa4ab</hash>
+         <hash>8418025d7e9802c4000d3bba65acf5de60001e7ab9e6a682566df26ea7e2c2d0</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\i2c_master\plib_sercom3_i2c_master.h</file>
@@ -33721,7 +33742,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\i2c_master\plib_sercom4_i2c_master.c</file>
-         <hash>7bee32cc976af57c361fb30905f3394d712412ce14d2f1437e1d6019341745dd</hash>
+         <hash>1d74261804d94c9ed1c13113ea11b61b62d45a4dde667b58334addf3dba0a9e0</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\i2c_master\plib_sercom4_i2c_master.h</file>
@@ -33729,7 +33750,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\i2c_master\plib_sercom5_i2c_master.c</file>
-         <hash>8959172c627505f3a4d8e2d0206f942a3be76872d140af93a2cfd93f9c17cea7</hash>
+         <hash>a61302bf48c4293f8f5b0e15a26a753d38ae59dcb3b3600c55746a3c3e14e5c2</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\i2c_master\plib_sercom5_i2c_master.h</file>
@@ -33741,7 +33762,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\spi_master\plib_sercom6_spi_master.c</file>
-         <hash>4cb0ded1cef36eafb40ca043e8fcb3a3ed9d2e9d983b0cf4624e70e761d93bdf</hash>
+         <hash>bb614f5fdb4c861089f3b8370a487c89028cd4692beef4c60a4e6bd9e0671da8</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\spi_master\plib_sercom6_spi_master.h</file>
@@ -33753,7 +33774,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\usart\plib_sercom0_usart.c</file>
-         <hash>01c7ae38eaf7239143722641e6b48b0bc6fd81bbab632b502afbb4794ec2e2dd</hash>
+         <hash>c8f4cd96d7eb8bcfdc140fc12024a8b9d978f78ea71b1abd06938d20cd3af932</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\usart\plib_sercom0_usart.h</file>
@@ -33761,7 +33782,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\usart\plib_sercom1_usart.c</file>
-         <hash>d0640fbd22dae99f5a4ad8f420d03f37783bdc4ec03adff73a3429150298a257</hash>
+         <hash>ba144061a35e1f38f494ddf6a80908dc51b18dcbe186fb209da5d6b9f965b006</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\sercom\usart\plib_sercom1_usart.h</file>
@@ -33773,7 +33794,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\tc\plib_tc0.c</file>
-         <hash>59324831cbb0660eaff44eabd09fee6aed7857b707af208eb1b3ebf4b0b20f7d</hash>
+         <hash>eeb6a0301e2e32683e03541d15c13bf17a5b9fdbaefaa3e88ffadd71c214e755</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\tc\plib_tc0.h</file>
@@ -33781,7 +33802,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\tc\plib_tc1.c</file>
-         <hash>e68487b6308362abfbebd6b05a05ff459b9fc2f894ce710abdace14bba0d6621</hash>
+         <hash>98f16583bccfa16cf244e3443a30efb5162112cbf4dcd9fe01d703dd3c6bb9e9</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\tc\plib_tc1.h</file>
@@ -33789,7 +33810,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\tc\plib_tc2.c</file>
-         <hash>ced2c89520b9462198c0dfe68a9bb9519e5664978131eb5efd8445632d17bf38</hash>
+         <hash>86d0ad9d0be655a291c2322f941653d670d7195bc5db06617bcc35f663202092</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\tc\plib_tc2.h</file>
@@ -33797,7 +33818,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\tc\plib_tc4.c</file>
-         <hash>e16bf3a4c84c0727ba321533f37bbf3fb0759444971d19842e210af4952aab82</hash>
+         <hash>23dff2e67416872a45ada118c306c625ffcff32032e61ae3ac3d5be590b5e5d5</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\tc\plib_tc4.h</file>
@@ -33805,7 +33826,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\tc\plib_tc7.c</file>
-         <hash>379a8019c81d559c64b38c2bfe0517afa81a727215fafd295629e7e78c3ddaae</hash>
+         <hash>f53494b8139c7426a167dc58db4aedc5d6844adcca6d78b0d9d903bf767dd4b3</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\tc\plib_tc7.h</file>

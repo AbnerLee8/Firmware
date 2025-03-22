@@ -56,13 +56,13 @@
 
 
 /* SERCOM6 clk freq value for the baud calculation */
-#define SERCOM6_Frequency      (60000000UL)
+#define SERCOM6_Frequency      (24000000UL)
 
 /* SERCOM6 SPI baud value for 1000000 Hz baud rate */
 //#define SERCOM6_SPIM_BAUD_VALUE         (29UL)
 
 /* SERCOM6 SPI baud value for 3300000 Hz baud rate */
-#define SERCOM6_SPIM_BAUD_VALUE         (8UL)
+#define SERCOM6_SPIM_BAUD_VALUE         (2UL)
 
 
 // *****************************************************************************

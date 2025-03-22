@@ -62,15 +62,15 @@
 
 #define SERCOM5_I2CM_SPEED_HZ           100000
 
-/* sercom5 I2C baud value */
-#define SERCOM5_I2CM_BAUD_VALUE         (0xFFU)
+/* SERCOM5 I2C baud value */
+#define SERCOM5_I2CM_BAUD_VALUE         (0x72U)
 
 
 volatile static SERCOM_I2C_OBJ sercom5I2CObj;
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: sercom5 I2C Implementation
+// Section: SERCOM5 I2C Implementation
 // *****************************************************************************
 // *****************************************************************************
 // *****************************************************************************
@@ -81,7 +81,7 @@ void SERCOM5_I2C_Initialize(void)
     SERCOM5_REGS->I2CM.SERCOM_CTRLA = SERCOM_I2CM_CTRLA_SWRST_Msk ;
 
     /* Wait for synchronization */
-    while(( SERCOM5_REGS->I2CM.SERCOM_SYNCBUSY) != 0U)
+    while((SERCOM5_REGS->I2CM.SERCOM_SYNCBUSY) != 0U)
     {
         /* Do nothing */
     }
@@ -90,19 +90,19 @@ void SERCOM5_I2C_Initialize(void)
     SERCOM5_REGS->I2CM.SERCOM_CTRLB = SERCOM_I2CM_CTRLB_SMEN_Msk;
 
     /* Wait for synchronization */
-    while(( SERCOM5_REGS->I2CM.SERCOM_SYNCBUSY) != 0U)
+    while((SERCOM5_REGS->I2CM.SERCOM_SYNCBUSY) != 0U)
     {
         /* Do nothing */
     }
 
     /* Baud rate - Master Baud Rate*/
-    SERCOM5_REGS->I2CM.SERCOM_BAUD =  SERCOM5_I2CM_BAUD_VALUE;
+    SERCOM5_REGS->I2CM.SERCOM_BAUD = SERCOM5_I2CM_BAUD_VALUE;
 
     /* Set Operation Mode (Master), SDA Hold time, run in stand by and i2c master enable */
     SERCOM5_REGS->I2CM.SERCOM_CTRLA = SERCOM_I2CM_CTRLA_MODE_I2C_MASTER | SERCOM_I2CM_CTRLA_SDAHOLD_75NS | SERCOM_I2CM_CTRLA_SPEED_STANDARD_AND_FAST_MODE | SERCOM_I2CM_CTRLA_SCLSM(0UL) | SERCOM_I2CM_CTRLA_ENABLE_Msk ;
 
     /* Wait for synchronization */
-    while(( SERCOM5_REGS->I2CM.SERCOM_SYNCBUSY) != 0U)
+    while((SERCOM5_REGS->I2CM.SERCOM_SYNCBUSY) != 0U)
     {
         /* Do nothing */
     }
@@ -111,12 +111,12 @@ void SERCOM5_I2C_Initialize(void)
     SERCOM5_REGS->I2CM.SERCOM_STATUS = (uint16_t)SERCOM_I2CM_STATUS_BUSSTATE(0x01UL);
 
     /* Wait for synchronization */
-    while(( SERCOM5_REGS->I2CM.SERCOM_SYNCBUSY) != 0U)
+    while((SERCOM5_REGS->I2CM.SERCOM_SYNCBUSY) != 0U)
     {
         /* Do nothing */
     }
 
-    /* Initialize the sercom5 PLib Object */
+    /* Initialize the SERCOM5 PLib Object */
     sercom5I2CObj.error = SERCOM_I2C_ERROR_NONE;
     sercom5I2CObj.state = SERCOM_I2C_STATE_IDLE;
 
@@ -124,7 +124,7 @@ void SERCOM5_I2C_Initialize(void)
     SERCOM5_REGS->I2CM.SERCOM_INTENSET = (uint8_t)SERCOM_I2CM_INTENSET_Msk;
 }
 
-static bool  SERCOM5_I2C_CalculateBaudValue(uint32_t srcClkFreq, uint32_t i2cClkSpeed, uint32_t* baudVal)
+static bool SERCOM5_I2C_CalculateBaudValue(uint32_t srcClkFreq, uint32_t i2cClkSpeed, uint32_t* baudVal)
 {
     uint32_t baudValue = 0U;
     float fSrcClkFreq = (float)srcClkFreq;
@@ -203,7 +203,7 @@ bool  SERCOM5_I2C_TransferSetup(SERCOM_I2C_TRANSFER_SETUP* setup, uint32_t srcCl
 
     if( srcClkFreq == 0U)
     {
-        srcClkFreq = 60000000UL;
+        srcClkFreq = 24000000UL;
     }
 
     if ( SERCOM5_I2C_CalculateBaudValue(srcClkFreq, i2cClkSpeed, &baudValue) == false)

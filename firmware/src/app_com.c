@@ -110,10 +110,10 @@ void air_read_callback( uintptr_t context )
 void air_write(uint8_t *buffer, size_t count)
 {
     SERCOM1_USART_Write(buffer, count);
-	printf("air ");
+	DBGprintf("air ");
 	for(int i=0;i<count;i++)
-		printf(" 0x%02x ",buffer[i]);
-	printf(" \n");
+		DBGprintf(" 0x%02x ",buffer[i]);
+	DBGprintf(" \n");
     while (SERCOM1_USART_WriteIsBusy()) {
         osDelayMs(1);
     }

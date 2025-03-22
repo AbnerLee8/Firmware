@@ -89,7 +89,7 @@ void TC2_TimerInitialize( void )
     TC2_REGS->COUNT32.TC_WAVE = (uint8_t)TC_WAVE_WAVEGEN_MPWM;
 
     /* Configure timer period */
-    TC2_REGS->COUNT32.TC_CC[0U] = 59999U;
+    TC2_REGS->COUNT32.TC_CC[0U] = 23999U;
 
     /* Clear all interrupt flags */
     TC2_REGS->COUNT32.TC_INTFLAG = (uint8_t)TC_INTFLAG_Msk;
@@ -127,7 +127,7 @@ void TC2_TimerStop( void )
 
 uint32_t TC2_TimerFrequencyGet( void )
 {
-    return (uint32_t)(60000000U);
+    return (uint32_t)(24000000U);
 }
 
 void TC2_TimerCommandSet(TC_COMMAND command)

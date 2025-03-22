@@ -245,9 +245,9 @@ void atmo_write(uint8_t *wrbuf, uint len)
    //printf("spi data");
    for (uint i = 0; i < len; i++) {
         atmo_wrbuf[i] = wrbuf[i];
-       printf("\t[%d] 0x%02x ",i,atmo_wrbuf[i]);
+       //printf("\t[%d] 0x%02x ",i,atmo_wrbuf[i]);
    }
-   printf("\n");
+   //printf("\n");
     SERCOM6_SPI_Write(atmo_wrbuf, len);
 }
 RGB_INFO *_this_rgb = NULL;
