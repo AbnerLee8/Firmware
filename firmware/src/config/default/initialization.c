@@ -272,9 +272,9 @@ void SYS_Initialize ( void* data )
 
     TC2_TimerInitialize();
 
-    PDEC_QDECInitialize();
-
     TC4_CompareInitialize();
+
+    PDEC_QDECInitialize();
 
     TC7_CompareInitialize();
 
@@ -282,15 +282,15 @@ void SYS_Initialize ( void* data )
 
     SERCOM1_USART_Initialize();
 
-    SERCOM0_USART_Initialize();
-
     EVSYS_Initialize();
+
+    SERCOM0_USART_Initialize();
 
     SERCOM6_SPI_Initialize();
 
-    SERCOM5_I2C_Initialize();
-
     PM_Initialize();
+
+    SERCOM5_I2C_Initialize();
 
     SERCOM4_I2C_Initialize();
 	
@@ -332,6 +332,7 @@ void SYS_Initialize ( void* data )
     APP_MEM_Initialize();
     BUT_MGR_Initialize();
     APP_ATMO_Initialize();
+    APP_CHARGE_Initialize();
 
 
     NVIC_Initialize();

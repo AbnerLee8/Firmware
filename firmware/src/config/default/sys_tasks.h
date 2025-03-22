@@ -84,6 +84,9 @@ extern TaskHandle_t xBUT_MGR_Tasks;
 /* Declaration of  APP_ATMO_Tasks task handle */
 extern TaskHandle_t xAPP_ATMO_Tasks;
 
+/* Declaration of  APP_CHARGE_Tasks task handle */
+extern TaskHandle_t xAPP_CHARGE_Tasks;
+
 /* Declaration of  APP_JSON_Tasks task handle */
 extern TaskHandle_t xAPP_JSON_Tasks;
 

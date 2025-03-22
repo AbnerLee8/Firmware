@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app_right_sns.c
+    app_charge.c
 
   Summary:
     This file contains the source code for the MPLAB Harmony application.
@@ -27,7 +27,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#include "app_right_sns.h"
+#include "app_charge.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -45,12 +45,12 @@
     This structure holds the application's data.
 
   Remarks:
-    This structure should be initialized by the APP_RIGHT_SNS_Initialize function.
+    This structure should be initialized by the APP_CHARGE_Initialize function.
 
     Application strings and buffers are be defined outside this structure.
 */
 
-APP_RIGHT_SNS_DATA app_right_snsData;
+APP_CHARGE_DATA app_chargeData;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -70,49 +70,6 @@ APP_RIGHT_SNS_DATA app_right_snsData;
 
 /* TODO:  Add any necessary local functions.
 */
-// ********************************************
-// I2C Read/Write functions for Wear Sensor
-// ********************************************
-#define LOGIC_I2C_ADDR       0x08
-#define LOGIC_I2C_Write(s,wa,wn)  SERCOM5_I2C_Write(s,wa,wn)
-#define LOGIC_I2C_Read(s,ra,rn)   SERCOM5_I2C_Read(s,ra,rn)
-#define LOGIC_I2C_WriteRead(s,wa,wn,ra,rn)    SERCOM5_I2C_WriteRead(s,wa,wn,ra,rn)
-#define LOGIC_I2C_IsBusy()        SERCOM5_I2C_IsBusy()
-#define LOGIC_I2C_ErrorGet()      SERCOM5_I2C_ErrorGet()
-
-// .............................................................................
-int logic_SLG46536_write(uint8_t *buf, uint len)
-{
-    LOGIC_I2C_Write(LOGIC_I2C_ADDR, buf, len);
-    while (LOGIC_I2C_IsBusy()) {
-        osDelayMs(1);
-    }
-    return LOGIC_I2C_ErrorGet();
-}
-// .............................................................................
-int logic_SLG46536_read(uint8_t *buf, uint len)
-{
-    LOGIC_I2C_Read(LOGIC_I2C_ADDR, buf, len);
-    while (LOGIC_I2C_IsBusy()) {
-        osDelayMs(1);
-    }
-    return LOGIC_I2C_ErrorGet();
-}
-// .............................................................................
-int logic_SLG46536_writeread(uint8_t *wrbuf, uint wrlen, uint8_t *rdbuf, uint rdlen)
-{
-    LOGIC_I2C_WriteRead(LOGIC_I2C_ADDR, wrbuf, wrlen, rdbuf, rdlen);
-    while (LOGIC_I2C_IsBusy()) {
-        osDelayMs(1);
-    }
-    return LOGIC_I2C_ErrorGet();
-}
-bool logic_SLG46536_interrupted(void)
-{
-  if(!LOGIC_INT_47011_Get())
-  	return(true);
-  else return(false);
-}
 
 
 // *****************************************************************************
@@ -123,16 +80,16 @@ bool logic_SLG46536_interrupted(void)
 
 /*******************************************************************************
   Function:
-    void APP_RIGHT_SNS_Initialize ( void )
+    void APP_CHARGE_Initialize ( void )
 
   Remarks:
-    See prototype in app_right_sns.h.
+    See prototype in app_charge.h.
  */
 
-void APP_RIGHT_SNS_Initialize ( void )
+void APP_CHARGE_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
-    app_right_snsData.state = APP_RIGHT_SNS_STATE_INIT;
+    app_chargeData.state = APP_CHARGE_STATE_INIT;
 
 
 
@@ -144,20 +101,20 @@ void APP_RIGHT_SNS_Initialize ( void )
 
 /******************************************************************************
   Function:
-    void APP_RIGHT_SNS_Tasks ( void )
+    void APP_CHARGE_Tasks ( void )
 
   Remarks:
-    See prototype in app_right_sns.h.
+    See prototype in app_charge.h.
  */
 
-void APP_RIGHT_SNS_Tasks ( void )
+void APP_CHARGE_Tasks ( void )
 {
 
     /* Check the application's current state. */
-    switch ( app_right_snsData.state )
+    switch ( app_chargeData.state )
     {
         /* Application's initial state. */
-        case APP_RIGHT_SNS_STATE_INIT:
+        case APP_CHARGE_STATE_INIT:
         {
             bool appInitialized = true;
 
@@ -165,12 +122,12 @@ void APP_RIGHT_SNS_Tasks ( void )
             if (appInitialized)
             {
 
-                app_right_snsData.state = APP_RIGHT_SNS_STATE_SERVICE_TASKS;
+                app_chargeData.state = APP_CHARGE_STATE_SERVICE_TASKS;
             }
             break;
         }
 
-        case APP_RIGHT_SNS_STATE_SERVICE_TASKS:
+        case APP_CHARGE_STATE_SERVICE_TASKS:
         {
 
             break;

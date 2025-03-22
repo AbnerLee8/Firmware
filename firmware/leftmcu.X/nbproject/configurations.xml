@@ -322,6 +322,7 @@
       <itemPath>../src/max77985.h</itemPath>
       <itemPath>../src/cw221x.h</itemPath>
       <itemPath>../src/app_right_sns.h</itemPath>
+      <itemPath>../src/app_charge.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -504,6 +505,7 @@
       <itemPath>../src/max77985.c</itemPath>
       <itemPath>../src/cw221x.c</itemPath>
       <itemPath>../src/app_right_sns.c</itemPath>
+      <itemPath>../src/app_charge.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app_right_sns.h
+    app_charge.h
 
   Summary:
     This header file provides prototypes and definitions for the application.
@@ -13,20 +13,20 @@
   Description:
     This header file provides function prototypes and data type definitions for
     the application.  Some of these are required by the system (such as the
-    "APP_RIGHT_SNS_Initialize" and "APP_RIGHT_SNS_Tasks" prototypes) and some of them are only used
-    internally by the application (such as the "APP_RIGHT_SNS_STATES" definition).  Both
+    "APP_CHARGE_Initialize" and "APP_CHARGE_Tasks" prototypes) and some of them are only used
+    internally by the application (such as the "APP_CHARGE_STATES" definition).  Both
     are defined here for convenience.
 *******************************************************************************/
 
-#ifndef _APP_RIGHT_SNS_H
-#define _APP_RIGHT_SNS_H
+#ifndef _APP_CHARGE_H
+#define _APP_CHARGE_H
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include "app.h"
+
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
@@ -61,11 +61,11 @@ extern "C" {
 typedef enum
 {
     /* Application's state machine's initial state. */
-    APP_RIGHT_SNS_STATE_INIT=0,
-    APP_RIGHT_SNS_STATE_SERVICE_TASKS,
+    APP_CHARGE_STATE_INIT=0,
+    APP_CHARGE_STATE_SERVICE_TASKS,
     /* TODO: Define states used by the application state machine. */
 
-} APP_RIGHT_SNS_STATES;
+} APP_CHARGE_STATES;
 
 
 // *****************************************************************************
@@ -84,11 +84,11 @@ typedef enum
 typedef struct
 {
     /* The application's current state */
-    APP_RIGHT_SNS_STATES state;
+    APP_CHARGE_STATES state;
 
     /* TODO: Define any additional data used by the application. */
 
-} APP_RIGHT_SNS_DATA;
+} APP_CHARGE_DATA;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -106,7 +106,7 @@ typedef struct
 
 /*******************************************************************************
   Function:
-    void APP_RIGHT_SNS_Initialize ( void )
+    void APP_CHARGE_Initialize ( void )
 
   Summary:
      MPLAB Harmony application initialization routine.
@@ -114,7 +114,7 @@ typedef struct
   Description:
     This function initializes the Harmony application.  It places the
     application in its initial state and prepares it to run so that its
-    APP_RIGHT_SNS_Tasks function can be called.
+    APP_CHARGE_Tasks function can be called.
 
   Precondition:
     All other system initialization routines should be called before calling
@@ -128,19 +128,19 @@ typedef struct
 
   Example:
     <code>
-    APP_RIGHT_SNS_Initialize();
+    APP_CHARGE_Initialize();
     </code>
 
   Remarks:
     This routine must be called from the SYS_Initialize function.
 */
 
-void APP_RIGHT_SNS_Initialize ( void );
+void APP_CHARGE_Initialize ( void );
 
 
 /*******************************************************************************
   Function:
-    void APP_RIGHT_SNS_Tasks ( void )
+    void APP_CHARGE_Tasks ( void )
 
   Summary:
     MPLAB Harmony Demo application tasks function
@@ -161,14 +161,14 @@ void APP_RIGHT_SNS_Initialize ( void );
 
   Example:
     <code>
-    APP_RIGHT_SNS_Tasks();
+    APP_CHARGE_Tasks();
     </code>
 
   Remarks:
     This routine must be called from SYS_Tasks() routine.
  */
 
-void APP_RIGHT_SNS_Tasks( void );
+void APP_CHARGE_Tasks( void );
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
@@ -176,7 +176,7 @@ void APP_RIGHT_SNS_Tasks( void );
 #endif
 //DOM-IGNORE-END
 
-#endif /* _APP_RIGHT_SNS_H */
+#endif /* _APP_CHARGE_H */
 
 /*******************************************************************************
  End of File

@@ -1095,8 +1095,11 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;APP9_C&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;.c&lt;/Value&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app_charge.c&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -1108,8 +1111,11 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;APP9_H&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;name&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;.h&lt;/Value&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app_charge.h&lt;/Value&gt;
       &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -3512,7 +3518,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_ENABLE_9&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -3712,7 +3718,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_NAME_9&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;app_charge&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -33430,6 +33436,14 @@
          <hash>ccea88fc729dc7c7b915b4da035e9a6d37f2d4ebd45cc3aad3fa37f033cd860f</hash>
       </entry>
       <entry>
+         <file>..\src\app_charge.c</file>
+         <hash>e3cf52b09d210bad647176746a678fbfcbb9fac86ac0ead427f38dea59fe0333</hash>
+      </entry>
+      <entry>
+         <file>..\src\app_charge.h</file>
+         <hash>3f8c554e4d5f166cb2f53bfca4645cac1e4d07931f6af41d60cbc7e9d66526c9</hash>
+      </entry>
+      <entry>
          <file>..\src\app_com.c</file>
          <hash>a6bf32c6204fc3f153c8cee60df2b15e2ba9ec2de807f0f468ffc28431f2cf33</hash>
       </entry>
@@ -33507,7 +33521,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\definitions.h</file>
-         <hash>61bc275893f359ae69f04097d680fd4ba7b8bf525edcf254c0ea23956f941a88</hash>
+         <hash>159b3bd5dcb535f21e57e11ac9dd288a9600ca92875e9b159a5b559fb233aa58</hash>
       </entry>
       <entry>
          <file>..\src\config\default\device.h</file>
@@ -33579,7 +33593,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\initialization.c</file>
-         <hash>76e9e02bdddba07437929c3ce6ff914c9ab8e386a7d324b8915fd16a6707b4c5</hash>
+         <hash>1ebc229db4f228f94f831eb300f2873eb5773ce96be389d64fec571cdfcbfbfa</hash>
       </entry>
       <entry>
          <file>..\src\config\default\interrupts.c</file>
@@ -33815,7 +33829,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\sys_tasks.h</file>
-         <hash>0a9a1047bce5ada4a4c66b5a574e74bcc47ae40f7f4ddbb40be5d4ae37e0994c</hash>
+         <hash>95b9cca7484c13b9e61d3a96f3400679f90c92cf51900fb82fe2e68e97077e0b</hash>
       </entry>
       <entry>
          <file>..\src\config\default\system\cache\sys_cache.c</file>
@@ -33931,7 +33945,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\tasks.c</file>
-         <hash>6bca9366a839655e84b92a6906aa865411021e19432792fde271789b90132bdd</hash>
+         <hash>52ac1361a84f7b132f4d3e24155e184e54b46abac7db18dd73d5ee9dbf58a6be</hash>
       </entry>
       <entry>
          <file>..\src\config\default\toolchain_specifics.h</file>
