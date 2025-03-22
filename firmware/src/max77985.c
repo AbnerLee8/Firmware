@@ -23,17 +23,31 @@
 
 #define CHARGER_LOCK()      charger_lock(true)
 #define CHARGER_UNLOCK()    charger_lock(false)
+
 // ............................................................................
 // .............................................................................
 // Return 0 for success, return 1 for errors.
 // .............................................................................
-int charger_write(uint8_t *buf, int len)
+int com5_iic_write(uint8_t *buf, int len)
 {
     I2C_C_Write(I2C_CHARGER_ADDR, buf, len);
     while (I2C_C_IsBusy()) {
         osDelayMs(1);
     }
     return I2C_C_ErrorGet();
+}
+// ............................................................................
+// .............................................................................
+// Return 0 for success, return 1 for errors.
+// .............................................................................
+int charger_write(uint8_t *buf, int len)
+{
+    int ret;
+    ret = com5_iic_write(buf,len);
+    if(ret){
+      ret = com5_iic_write(buf,len);
+    }
+    return ret;
 }
 // ............................................................................
 // onoff = 0 -> turn the charger OFF
@@ -51,7 +65,7 @@ int charger_onoff(uint8_t onoff)
 }
 
 //init charger
-void charger_init(void)
+int charger_init(void)
 {
     int ret;
     ret = charger_onoff(BATT_CHARGER_ON);
@@ -60,12 +74,15 @@ void charger_init(void)
     }else{
       printf("charger ok\n");
     }
+    return ret;
 }
 
 //uinit charger
-void charger_uinit(void)
+int charger_uinit(void)
 {
-    charger_onoff(BATT_CHARGER_OFF);
+    int ret;
+    ret = charger_onoff(BATT_CHARGER_OFF);
+    return ret;
 }
 
 // ............................................................................

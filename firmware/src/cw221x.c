@@ -38,8 +38,11 @@ unsigned char config_cw221x_profile_info[SIZE_OF_PROFILE] = {
 // I2C Read/Write functions for cw221x
 // ********************************************
 
+// ............................................................................
 // .............................................................................
-int i2c_cw221x_write(uint8_t *buf, int len)
+// Return 0 for success, return 1 for errors.
+// .............................................................................
+int iic_write(uint8_t *buf, int len)
 {
     I2C_CW_Write(I2C_CW221X_ADDR, buf, len);
     while (I2C_CW_IsBusy()) {
@@ -48,7 +51,11 @@ int i2c_cw221x_write(uint8_t *buf, int len)
     return I2C_CW_ErrorGet();
 }
 
-int i2c_cw221x_read(uint8_t *buf, int len)
+// ............................................................................
+// .............................................................................
+// Return 0 for success, return 1 for errors.
+// .............................................................................
+int iic_read(uint8_t *buf, int len)
 {
     I2C_CW_Read(I2C_CW221X_ADDR, buf, len);
     while (I2C_CW_IsBusy()) {
@@ -57,14 +64,50 @@ int i2c_cw221x_read(uint8_t *buf, int len)
     return I2C_CW_ErrorGet();
 }
 
+// ............................................................................
 // .............................................................................
-int i2c_cw221x_writeread(uint8_t *wrbuf, int wrlen, uint8_t *rdbuf, int rdlen)
+// Return 0 for success, return 1 for errors.
+// .............................................................................
+int iic_writeread(uint8_t *wrbuf, int wrlen, uint8_t *rdbuf, int rdlen)
 {
     I2C_CW_WriteRead(I2C_CW221X_ADDR, wrbuf, wrlen, rdbuf, rdlen);
     while (I2C_CW_IsBusy()) {
         osDelayMs(1);
     }
     return I2C_CW_ErrorGet();
+}
+
+
+// .............................................................................
+int i2c_cw221x_write(uint8_t *buf, int len)
+{
+    int ret;
+    ret = iic_write(buf,len);
+    if(ret){
+        ret = iic_write(buf,len);
+    }
+    return ret;
+}
+
+int i2c_cw221x_read(uint8_t *buf, int len)
+{
+    int ret;
+    ret = iic_read(buf,len);
+    if(ret){
+        ret = iic_read(buf,len);
+    }
+    return ret;
+}
+
+// .............................................................................
+int i2c_cw221x_writeread(uint8_t *wrbuf, int wrlen, uint8_t *rdbuf, int rdlen)
+{
+    int ret;
+    ret = iic_writeread(wrbuf,wrlen,rdbuf,rdlen);
+    if(ret){
+        ret = iic_writeread(wrbuf,wrlen,rdbuf,rdlen);
+    }
+    return ret;
 }
 
 int batt_cw221x_init(void)

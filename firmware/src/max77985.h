@@ -15,10 +15,11 @@ typedef  enum BATT_CHARGER_STATE{
     BATT_CHARGER_ON = 1
 }BATT_CHARGER_STATE_E;
 
+int com5_iic_write(uint8_t *buf, int len);
 int charger_write(uint8_t *buf, int len);
 int charger_onoff(uint8_t onoff);
-void charger_init(void);
-void charger_uinit(void);
+int charger_init(void);
+int charger_uinit(void);
 void charger_lock(bool lock);
 void charger_set_CC(unsigned mA);
 //DOM-IGNORE-BEGIN
