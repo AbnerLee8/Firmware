@@ -19,6 +19,8 @@ int charger_write(uint8_t *buf, int len);
 int charger_onoff(uint8_t onoff);
 void charger_init(void);
 void charger_uinit(void);
+void charger_lock(bool lock);
+void charger_set_CC(unsigned mA);
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
 }

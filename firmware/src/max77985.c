@@ -21,6 +21,8 @@
 #define I2C_C_IsBusy()        SERCOM5_I2C_IsBusy()
 #define I2C_C_ErrorGet()      SERCOM5_I2C_ErrorGet()
 
+#define CHARGER_LOCK()      charger_lock(true)
+#define CHARGER_UNLOCK()    charger_lock(false)
 // ............................................................................
 // .............................................................................
 // Return 0 for success, return 1 for errors.
@@ -51,17 +53,59 @@ int charger_onoff(uint8_t onoff)
 //init charger
 void charger_init(void)
 {
-  int ret;
-  ret = charger_onoff(BATT_CHARGER_ON);
-  if(ret){
-    printf("charger error\n");
-  }else{
-    printf("charger ok\n");
-  }
+    int ret;
+    ret = charger_onoff(BATT_CHARGER_ON);
+    if(ret){
+      printf("charger error\n");
+    }else{
+      printf("charger ok\n");
+    }
 }
 
 //uinit charger
 void charger_uinit(void)
 {
-  charger_onoff(BATT_CHARGER_OFF);
+    charger_onoff(BATT_CHARGER_OFF);
 }
+
+// ............................................................................
+// some registers are protected
+// lock = 1 -> locked, protected
+// lock = 0 -> unlocked
+// ............................................................................
+void charger_lock(bool lock)
+{
+    uint8_t wrbuf[4];
+
+    wrbuf[0] = 0x1C; // CHG_CNFG_06
+    wrbuf[1] = lock ? 0x00 : 0x0C;
+    charger_write(wrbuf, 2);
+}
+
+// ............................................................................
+// mA --> milliampers (100..3500 for MAX77985)
+// ............................................................................
+void charger_set_CC(unsigned mA)
+{
+    uint8_t wrbuf[4];
+
+    if (mA < 100) mA = 100;
+    if (mA > 3500) mA = 3500;
+
+    CHARGER_UNLOCK();
+
+    wrbuf[0] = 0x18;        // CHG_CNFG_02 - fast charging current
+    wrbuf[1] = mA / 50;
+    charger_write(wrbuf, 2);
+
+    wrbuf[0] = 0x1F;        // CHG_CNFG_09 - input limit
+    wrbuf[1] = (mA / 50) + 2;     // this will set the limit 50mA higher than CC
+    charger_write(wrbuf, 2);
+
+    wrbuf[0] = 0x1A;        // CHG_CNFG_04 - termination voltage
+    wrbuf[1] = 0x14 | 0x20;     // this will set the limit to 4.40V
+    charger_write(wrbuf, 2);
+
+    CHARGER_LOCK();
+}
+
